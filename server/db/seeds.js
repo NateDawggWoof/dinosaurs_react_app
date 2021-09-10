@@ -1,4 +1,4 @@
-use dino
+use dinos
 
 db.dropDataBase()
 

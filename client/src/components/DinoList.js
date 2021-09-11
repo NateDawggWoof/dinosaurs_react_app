@@ -10,15 +10,20 @@ const DinoList = ({ allDinosaurs }) => {
         setSelectedDinosaur(clickedDinosaur)
     }
 
+    const onClickClose = () => {
+        setSelectedDinosaur(null)
+    } 
+
     const dinoNodes = allDinosaurs.map((dinosaur, index) => {
-        return <DinoItem dinosaur={dinosaur} key={index} onClickSelected={onClickSelected} />
+        return <DinoItem dinosaur={dinosaur} key={index} onClickSelected={onClickSelected}/>
+        
     })
     
     return (
         <>
             <h2>This is DinoList</h2>
             {dinoNodes}
-            { selectedDinosaur ? <DinoDetails selectedDinosaur={selectedDinosaur} /> : null }
+            { selectedDinosaur ? <DinoDetails selectedDinosaur={selectedDinosaur} onClickClose={onClickClose}/> : null }
         </>
     )
 }

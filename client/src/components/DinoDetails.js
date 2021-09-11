@@ -1,37 +1,29 @@
 import React from 'react';
-import { useState } from 'react';
+import { CgCloseR } from "react-icons/cg";
 
 const DinoDetails = ({ selectedDinosaur, onClickClose }, ) => {
-    
-    // temporary style
-    const temporaryDiv = {
-        position: 'fixed',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100%',
 
-        display: 'flex',
-        justify_content: 'center',
-        align_items: 'center',
-        background: "grey",
-        opacity: '0.9'
+    /* "name": "Stegosaurus",
+    "nickname": "Stig",
+    "diet": "Herbivore", */
 
-    }
-
-    const closeButton = {
-        position: 'absolute',
-        top: '50px',
-        right: '50px'
-    }
     //no on-click in the close button
     return (
-        <div style={temporaryDiv}>
-             <button style={closeButton} onClick={onClickClose}>❌</button> 
-            <img alt={selectedDinosaur.name} src={`../image/${selectedDinosaur.img}`} />
-            <h2>{selectedDinosaur.name}</h2>
+        <div className='dinoDetails-wrapper'>
+                <img className='dinoDetails-img' alt={selectedDinosaur.name} src={`../image/${selectedDinosaur.img}`} />
+                <div className='dinoDetails-content-wrapper'>
+                    <div className='dinoDetails-name-close-wrapper'>
+                        <div className='dinoDetails-name'>{selectedDinosaur.name}</div>       
+                        <div className='dinoDetails-close' onClick={onClickClose}><CgCloseR size='50'/></div>
+                    </div>
+                    <div className='dinoDetails-text-wrapper'>
+                        <div className='dinoDetails-nick'>Nickname: <b>{selectedDinosaur.nickname}</b></div>
+                        <div className='dinoDetails-diet'>Diet: <b>{selectedDinosaur.diet}</b></div>
+                        <div className='dinoDetails-facts'>Facts: <b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</b></div>
+                    </div>
+                </div>
         </div>
-    )
+    )   
 }
 
 export default DinoDetails;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DinoItem from './DinoItem'
 import DinoDetails from './DinoDetails'
+import '../styles/DinoList.css'
 
 const DinoList = ({ allDinosaurs }) => {
 
@@ -21,8 +22,10 @@ const DinoList = ({ allDinosaurs }) => {
     
     return (
         <>
-            <h2>This is DinoList</h2>
-            {dinoNodes}
+            <h2>Dinosaurs</h2>
+            <div id='dinoList-wrapper'>
+                {dinoNodes}
+            </div>
             { selectedDinosaur ? <DinoDetails selectedDinosaur={selectedDinosaur} onClickClose={onClickClose}/> : null }
         </>
     )

@@ -1,10 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 
-const DinoDetails = ({ selectedDinosaur }, ) => {
-    //doesn't do anything
-    const [closeIcon, setCloseIcon] = useState(null);
-
+const DinoDetails = ({ selectedDinosaur, onClickClose }, ) => {
+    
     // temporary style
     const temporaryDiv = {
         position: 'fixed',
@@ -29,7 +27,7 @@ const DinoDetails = ({ selectedDinosaur }, ) => {
     //no on-click in the close button
     return (
         <div style={temporaryDiv}>
-             <button style={closeButton}>❌</button> 
+             <button style={closeButton} onClick={onClickClose}>❌</button> 
             <img alt={selectedDinosaur.name} src={`../image/${selectedDinosaur.img}`} />
             <h2>{selectedDinosaur.name}</h2>
         </div>

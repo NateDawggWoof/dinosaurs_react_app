@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import DinoContainer from './containers/DinoContainer';
+import * as dinoService from './service';
 import './App.css';
 
-function App() {
+const App = () => {
+
+  const [allDinosaurs, setAllDinosaurs] = useState([]);
+
+  useEffect(() => {
+    dinoService.getDinosaurs()
+      .then((allDinosaurs) => {
+        setAllDinosaurs(allDinosaurs);
+      })
+    }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Header</h1>
+      <DinoContainer allDinosaurs={allDinosaurs} />
+      <h1>Footer</h1>
+    </>
   );
 }
 

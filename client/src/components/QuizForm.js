@@ -1,17 +1,4 @@
-
-    // const [quizSelection, setQuizSelection] = useState([])
-    //     const onChange = () => {
-    //         if (value === dino.diet) {
-    //         return setQuizSelection(quizSelection)}
-    //     }
-    
-    //     const onSubmit = () => {
-    //         return quizSelection.map((index) => {
-    //             return <Score result={result} key={index}/>
-    //         })
-    //     }
-
-        import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
         const QuizForm = ({allDinosaurs}) => {
         

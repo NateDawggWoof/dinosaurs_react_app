@@ -3,7 +3,7 @@ import DinoItem from './DinoItem'
 import DinoDetails from './DinoDetails'
 import '../styles/DinoList.css'
 
-const DinoList = ({ allDinosaurs }) => {
+const DinoList = ({ allDinosaurs, togglePage}) => {
 
     const [ selectedDinosaur, setSelectedDinosaur ] = useState(null);
 
@@ -26,6 +26,7 @@ const DinoList = ({ allDinosaurs }) => {
             <div id='dinoList-wrapper'>
                 {dinoNodes}
             </div>
+            <button onClick={() => {togglePage('quiz')}}>Quiz Master</button>
             { selectedDinosaur ? <DinoDetails selectedDinosaur={selectedDinosaur} onClickClose={onClickClose}/> : null }
         </>
     )

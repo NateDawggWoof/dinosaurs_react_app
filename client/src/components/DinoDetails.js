@@ -17,6 +17,24 @@ const DinoDetails = ({ selectedDinosaur, onClickClose }, ) => {
         background: "grey",
         opacity: '0.9'
 
+const DinoDetails = ({ selectedDinosaur }, ) => {
+    //doesn't do anything
+    const [closeIcon, setCloseIcon] = useState(null);
+
+    // temporary style
+    const temporaryDiv = {
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100%',
+        height: '100%',
+
+        display: 'flex',
+        justify_content: 'center',
+        align_items: 'center',
+        background: "grey",
+        opacity: '0.9'
+
     }
 
     const closeButton = {

@@ -1,0 +1,24 @@
+body{
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 26px;
+}
+.close {
+    color: rgb(61, 148, 147);
+    float:inherit;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+.scoreDetails {
+    position: fixed;
+    padding-top: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, .93);
+}

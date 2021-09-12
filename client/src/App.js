@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import DinoContainer from './containers/DinoContainer';
 import * as dinoService from './service';
-import './App.css';
 import QuizContainer from './containers/QuizContainer';
 import HomeContainer from './containers/HomeContainer';
+import './App.css';
+import Layout from './components/Layout';
 
 const App = () => {
 
@@ -19,7 +20,7 @@ const App = () => {
 
     const display = (allDinosaurs) => {
       if (page =="home") {
-        return<HomeContainer allDinosaurs={allDinosaurs} togglePage={togglePage}/>
+        return <HomeContainer allDinosaurs={allDinosaurs} togglePage={togglePage}/>
       } else if (page == "dinos") {
         return <DinoContainer allDinosaurs={allDinosaurs} togglePage={togglePage}/>
       } else {
@@ -33,9 +34,9 @@ const App = () => {
 
   return (
     <>
-      <h1>Header</h1>
-      {display(allDinosaurs)}
-      <h1>Footer</h1>
+      <Layout togglePage={togglePage}>
+        {display(allDinosaurs)}
+      </Layout>
     </>
   );
 }

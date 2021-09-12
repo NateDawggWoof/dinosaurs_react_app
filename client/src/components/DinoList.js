@@ -21,14 +21,16 @@ const DinoList = ({ allDinosaurs, togglePage}) => {
     })
     
     return (
-        <>
-            <h2>Dinosaurs</h2>
+        <div id='dinoList-wrapper-block'>
+            <div id='dinoList-title'>Dinosaurs</div>
             <div id='dinoList-wrapper'>
                 {dinoNodes}
             </div>
-            <button onClick={() => {togglePage('quiz')}}>Quiz Master</button>
+            <div id='dinoList-button-wrapper'>
+                <button id='dinoList-button' onClick={() => {togglePage('quiz')}}>Quiz Master</button>
+            </div>
             { selectedDinosaur ? <DinoDetails selectedDinosaur={selectedDinosaur} onClickClose={onClickClose}/> : null }
-        </>
+        </div>
     )
 }
 

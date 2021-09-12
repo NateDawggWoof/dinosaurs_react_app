@@ -1,27 +1,55 @@
+/* DinoList */
+#dinoList-wrapper-block {
+    margin: 0 auto;
+    margin-top: 7.5rem;
+    margin-bottom: 2rem;
+    width: 80%;
+}
 #dinoList-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 80%;
     margin: 0 auto;
+    color: rgb(99, 99, 99);
+}
+#dinoList-title {
+    color: rgb(89, 89, 89);
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+#dinoList-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+#dinoList-button {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.5rem;
+    padding: 0.75rem 1rem;
+    margin: 1.5rem 0;
+    border-radius: 1rem;
+    background: rgb(255, 255, 255);
+    color: rgb(138, 91, 191);
+    border: 2px solid rgb(155, 155, 155);
+    cursor: pointer;
 }
 
+/* DinoItem */
 .dinoItems-wrapper {
     box-sizing: border-box;
-    border: 3px solid rgb(194, 194, 194);
+    border: 3px solid rgb(211, 211, 211);
     display: 'flex';
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    background: rgb(240, 240, 240);
+    background: rgb(247, 247, 247);
     width: 250px;
     height: 235px;
     border-radius: 1rem;
     padding: 0 1rem;
     margin: 1rem;
 }
-
 .dinoItems-img-wrapper {
     display: flex;
     justify-content: center;
@@ -30,14 +58,12 @@
     width: 180px;
     height: 180px;
 }
-
 .dinoItems-img {
     max-width:175px;
     max-height:150px;
     width: auto;
     height: auto;
 }
-
 .dinoItems-name {
     font-size: 1.75rem;
     font-family: 'Bubblegum Sans', cursive;
@@ -46,8 +72,10 @@
 }
 
 
+/* DinoDetails */
 .dinoDetails-wrapper {
     position: fixed;
+    z-index: 9;
     top: 0;
     left: 0;
     width: 100%;
@@ -57,7 +85,6 @@
     align-items: center;
     background: rgba(255, 255, 255, .93);
 }
-
 .dinoDetails-content-wrapper {
     display: flex;
     flex-direction: column;

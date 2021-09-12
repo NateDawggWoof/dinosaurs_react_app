@@ -3,11 +3,6 @@ import { CgCloseR } from "react-icons/cg";
 
 const DinoDetails = ({ selectedDinosaur, onClickClose }, ) => {
 
-    /* "name": "Stegosaurus",
-    "nickname": "Stig",
-    "diet": "Herbivore", */
-
-    //no on-click in the close button
     return (
         <div className='dinoDetails-wrapper'>
                 <img className='dinoDetails-img' alt={selectedDinosaur.name} src={`../image/${selectedDinosaur.img}`} />

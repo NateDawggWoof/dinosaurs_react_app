@@ -4,47 +4,9 @@ import Herbivore from '../styles/images/Herbivore.png'
 import Omnivore from '../styles/images/Omnivore.png'
 
 
-        const QuizForm = ({allDinosaurs}) => {
-        
-            const getAnswers = allDinosaurs.reduce((acc, dino)=>{
-                acc[dino.name]=dino.diet;
-                return acc;
-            }, {} )
-        
-            // console.log('getAnswers', getAnswers)
-        
-            const [formData, setFormData] = useState({})
-        
-            const [answers, setAnswers] = useState({...getAnswers})
-        
-            useEffect(()=>{
-                setAnswers(allDinosaurs.reduce((acc, dino)=>{
-                    acc[dino.name]=dino.diet;
-                    return acc;
-                }, {} ))
-            },[allDinosaurs])
-        
-            console.log('answers at start', answers)
-        
-            const [guesses, setGuesses] = useState({})
-        
-            const setValue = (dino,event) =>{
-                setGuesses({...guesses,[dino.name]:event.target.value})
-            }
-        
-            const quizAnswers = allDinosaurs.map((dino, index) => {
-                return (dino.diet)
-            })
-        
-            const onSubmit = () => {
-                console.log('guesses', guesses)
-                console.log('Answers', answers)
-                console.log(allDinosaurs.filter((dino)=>{
-                    return guesses[dino.name]===answers[dino.name]
-                }).length)
-        
-            }
-        
+        const QuizForm = ({allDinosaurs, answers, setValue, onSubmit}) => {
+
+
             const quizDinos = allDinosaurs.map((dino, index) => {
                 return (
                     

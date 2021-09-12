@@ -2,20 +2,30 @@ import React, {useEffect, useState} from 'react';
 import Carnivore from '../styles/images/Carnivore.png'
 import Herbivore from '../styles/images/Herbivore.png'
 import Omnivore from '../styles/images/Omnivore.png'
+import '../styles/Score.css'
 
 
         const Score= ({score, togglePage}) => {
-
-
-
-        
-            return (
-                <div>
-                <h1>I'm the pop up</h1>
-                <p> You achieved {score}/6</p>
-                <button onClick={() => {togglePage('home')}}  id="save">Close</button>
-                </div>
-            );
+            if (score >=4) {
+                return (
+                <div className='scoreDetails'>
+                <h1> Well done, you achieved: </h1>
+                <h1> {score}/6</h1>
+                <button className="close" onClick={() => {togglePage('home')}}  id="save">Close</button>
+                </div>);
+            } else if (score ==0){
+                return (
+                <div className='scoreDetails'>
+                <h2> Try again, your score is: {score}/6</h2>
+                <button className="close" onClick={() => {togglePage('home')}}  id="save">Close</button>
+                </div>);
+            } else {
+                return (
+                <div className='scoreDetails'>
+                <h2> Not bad, you achieved: {score}/6</h2>
+                <button className="close" onClick={() => {togglePage('home')}}  id="save">Close</button>
+                </div>);
+            }
         }
         
         export default Score

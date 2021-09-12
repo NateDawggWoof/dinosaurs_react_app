@@ -3,11 +3,12 @@ import DinoContainer from './containers/DinoContainer';
 import * as dinoService from './service';
 import './App.css';
 import QuizContainer from './containers/QuizContainer';
+import HomeContainer from './containers/HomeContainer';
 
 const App = () => {
 
   const [allDinosaurs, setAllDinosaurs] = useState([]);
-  const [page, setPage] = useState ("quiz")
+  const [page, setPage] = useState ("home")
 
   useEffect(() => {
     dinoService.getDinosaurs()
@@ -18,7 +19,7 @@ const App = () => {
 
     const display = (allDinosaurs) => {
       if (page =="home") {
-        return<DinoContainer allDinosaurs={allDinosaurs}/>
+        return<HomeContainer allDinosaurs={allDinosaurs} togglePage={togglePage}/>
       } else if (page == "dinos") {
         return <DinoContainer allDinosaurs={allDinosaurs}/>
       } else {

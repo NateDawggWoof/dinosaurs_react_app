@@ -3,8 +3,8 @@ import QuizForm from "../components/QuizForm";
 
 const QuizContainer = ({allDinosaurs}) => {
     return (
-        <div>
-            <h1> I'm Quiz</h1>
+        <div style={{position: 'relative',textAlign: 'center', padding: 40}}>
+            <h1> Dino Quiz</h1>
             <QuizForm allDinosaurs={allDinosaurs}/>
         </div>
     )

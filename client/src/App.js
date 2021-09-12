@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import DinoContainer from './containers/DinoContainer';
+import DinoContainer from './containers/DinoContainer';
 import * as dinoService from './service';
 import './App.css';
 import QuizContainer from './containers/QuizContainer';
@@ -16,21 +16,24 @@ const App = () => {
       })
     }, [])
 
-    // const display = (allDinosaurs) => {
-    //   if (page =="home") {
-    //     return<DinoContainer allDinosaurs={allDinosaurs}/>
-    //   } else if (page == "dinos") {
-    //     return <DinoContainer allDinosaurs={allDinosaurs}/>
-    //   } else {
-    //     return <QuizContainer allDinosaurs={allDinosaurs}/>
-    //   }
-    // }
+    const display = (allDinosaurs) => {
+      if (page =="home") {
+        return<DinoContainer allDinosaurs={allDinosaurs}/>
+      } else if (page == "dinos") {
+        return <DinoContainer allDinosaurs={allDinosaurs}/>
+      } else {
+        return <QuizContainer allDinosaurs={allDinosaurs} togglePage={togglePage}/>
+      }
+    }
+
+    const togglePage = (string) => {
+      setPage(string)
+    }
 
   return (
     <>
       <h1>Header</h1>
-      {/* {display(allDinosaurs)} */}
-      <QuizContainer allDinosaurs={allDinosaurs}/>
+      {display(allDinosaurs)}
       <h1>Footer</h1>
     </>
   );

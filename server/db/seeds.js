@@ -1,7 +1,6 @@
 use dinos
 
 db.dropDataBase()
-
 db.dinosaurs.insertMany(
 
 [

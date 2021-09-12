@@ -16,6 +16,7 @@ const DinoDetails = ({ selectedDinosaur, onClickClose }, ) => {
         align_items: 'center',
         background: "grey",
         opacity: '0.9'
+    }
 
 const DinoDetails = ({ selectedDinosaur }, ) => {
     //doesn't do anything
@@ -50,6 +51,6 @@ const DinoDetails = ({ selectedDinosaur }, ) => {
             <h2>{selectedDinosaur.name}</h2>
         </div>
     )
-}
+}}
 
 export default DinoDetails;

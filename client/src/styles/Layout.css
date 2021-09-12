@@ -12,7 +12,7 @@
     left: 0;
     height: 5rem;
     width: 100%;
-    background: rgb(211, 245, 209);
+    background: rgb(240, 240, 240);
     border-bottom: 3.5px solid rgb(213, 213, 213);
 }
 #header-wrapper {
@@ -64,7 +64,7 @@
 /* footer */
 #footer-wrapper-block {
     bottom: 0;
-    background: rgb(209, 226, 245);
+    background: rgb(240, 240, 240);
     border-top: 3.5px solid rgb(213, 213, 213);
     height: 2.5rem;
 }

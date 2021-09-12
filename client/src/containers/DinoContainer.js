@@ -1,10 +1,10 @@
 import React from 'react';
 import DinoList from '../components/DinoList';
 
-const DinoContainer = ({ allDinosaurs }) => {
+const DinoContainer = ({ allDinosaurs , togglePage}) => {
     return (
         <>
-            <DinoList allDinosaurs={allDinosaurs} />
+            <DinoList allDinosaurs={allDinosaurs} togglePage={togglePage} />
         </>
     )
 }

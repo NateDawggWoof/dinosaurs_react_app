@@ -21,7 +21,7 @@ const App = () => {
       if (page =="home") {
         return<HomeContainer allDinosaurs={allDinosaurs} togglePage={togglePage}/>
       } else if (page == "dinos") {
-        return <DinoContainer allDinosaurs={allDinosaurs}/>
+        return <DinoContainer allDinosaurs={allDinosaurs} togglePage={togglePage}/>
       } else {
         return <QuizContainer allDinosaurs={allDinosaurs} togglePage={togglePage}/>
       }

@@ -22,8 +22,12 @@ const App = () => {
       } else if (page == "dinos") {
         return <DinoContainer allDinosaurs={allDinosaurs}/>
       } else {
-        return <QuizContainer allDinosaurs={allDinosaurs}/>
+        return <QuizContainer allDinosaurs={allDinosaurs} togglePage={togglePage}/>
       }
+    }
+
+    const togglePage = (string) => {
+      setPage(string)
     }
 
   return (

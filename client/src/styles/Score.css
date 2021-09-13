@@ -1,24 +1,34 @@
 body{
     font-family: 'Bubblegum Sans', cursive;
-    font-size: 26px;
+    font-size: 28px;
+}
+
+.radio1 {
+    font-size: 3.25rem;
+    color:magenta;
+
 }
 .close {
-    color: rgb(61, 148, 147);
-    float:inherit;
-    font-size: 28px;
-    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    color: rgb(138, 91, 191);
+    background: white;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(203, 203, 203);
+    font-size: 1.5rem;
+    font-family: 'Bubblegum Sans', cursive;
   }
 
 .scoreDetails {
-    position: fixed;
-    padding-top: 50;
+    position:fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     display:grid;
-    overflow: auto;
-    justify-content: center;
-    align-items: center;
+    overflow:auto;
+    justify-content:center;
+    align-items:center;
+
     background: rgba(255, 255, 255, .93);
 }

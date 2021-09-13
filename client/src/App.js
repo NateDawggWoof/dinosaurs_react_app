@@ -9,18 +9,24 @@ import Layout from './components/Layout';
 const App = () => {
 
   const [allDinosaurs, setAllDinosaurs] = useState([]);
-  const [page, setPage] = useState ("home")
+  const [page, setPage] = useState ("home");
+  const [userName, setUserName] = useState("");
 
-  useEffect(() => {
-    dinoService.getDinosaurs()
-      .then((allDinosaurs) => {
-        setAllDinosaurs(allDinosaurs);
-      })
-    }, [])
+  // sets userName from HomeContainer
+  const saveUserName = (firstName) => {
+    setUserName(firstName)
+  }
+
+    useEffect(() => {
+      dinoService.getDinosaurs()
+        .then((allDinosaurs) => {
+          setAllDinosaurs(allDinosaurs);
+        })
+      }, [])
 
     const display = (allDinosaurs) => {
       if (page =="home") {
-        return <HomeContainer allDinosaurs={allDinosaurs} togglePage={togglePage}/>
+        return <HomeContainer allDinosaurs={allDinosaurs} togglePage={togglePage} saveUserName={saveUserName}/>
       } else if (page == "dinos") {
         return <DinoContainer allDinosaurs={allDinosaurs} togglePage={togglePage}/>
       } else {

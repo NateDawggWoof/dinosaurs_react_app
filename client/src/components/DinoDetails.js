@@ -3,20 +3,6 @@ import { CgCloseR } from "react-icons/cg";
 
 const DinoDetails = ({ selectedDinosaur, onClickClose }, ) => {
     
-
-    // "name": "Tyrannosaurus",
-    // "nickname": "Tyra",
-    // "diet": "Carnivore",
-    // "size": "3.7 - 6.1. metres",
-    // "img": "02.png",
-    // "period": "Cretaceous Period",
-    // "weight": "4,500 - 8,000 kg",
-    // "fact": {
-    //   "1": "The name Tyrannosaurus Rex comes from Greek and Latin and means 'Tyrant Lizard King'.",
-    //   "2": "They had 50-60 teeth, which were each the size of a banana!",
-    //   "3": "Their huge tail helped to keep them balanced - just like a pet cat!"
-
-    
     return (
         <div className='dinoDetails-wrapper'>
                 <img className='dinoDetails-img' alt={selectedDinosaur.name} src={`../image/${selectedDinosaur.img}`} />

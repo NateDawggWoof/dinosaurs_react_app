@@ -3,7 +3,6 @@
     margin-top: 5rem;
 }
 
-
 /* header */
 #header-wrapper-block {
     position: fixed;
@@ -14,6 +13,7 @@
     width: 100%;
     background: rgb(240, 240, 240);
     border-bottom: 3.5px solid rgb(213, 213, 213);
+
 }
 #header-wrapper {
     position: relative;
@@ -59,7 +59,6 @@
     border-radius: 0.5rem;
     border: 2px solid rgb(203, 203, 203);
 }
-
 
 /* footer */
 #footer-wrapper-block {

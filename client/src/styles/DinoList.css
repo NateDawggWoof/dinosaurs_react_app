@@ -85,6 +85,11 @@
     align-items: center;
     background: rgba(255, 255, 255, .93);
 }
+@media (max-width: 905px) { 
+    .dinoDetails-wrapper {
+        overflow-x: scroll;
+    }
+}
 .dinoDetails-content-wrapper {
     display: flex;
     flex-direction: column;

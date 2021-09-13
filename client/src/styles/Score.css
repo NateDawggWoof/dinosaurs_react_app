@@ -24,20 +24,6 @@ section {
     font-family: 'Bubblegum Sans', cursive;
   }
 
-/* .scoreDetails {
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display:grid;
-    overflow:auto;
-    justify-content:center;
-    align-items:center;
-
-    background: rgba(255, 255, 255, .93);
-} */
-
 #quiz img {
     border-radius: 5%;
 }

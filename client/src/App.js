@@ -29,9 +29,15 @@ const App = () => {
       <Router>
         <Layout>
         <Switch>
-          <Route exact path="/" render={() => <HomeContainer allDinosaurs={allDinosaurs}/>} />
-          <Route path="/dinosaurs" render={() => <DinoContainer allDinosaurs={allDinosaurs}/>} />
-          <Route path="/quiz" render={() => <QuizContainer allDinosaurs={allDinosaurs}/>} />
+          <Route exact path="/">
+            <HomeContainer saveUserName={saveUserName} allDinosaurs={allDinosaurs}/>
+          </Route>
+          <Route path="/dinosaurs">
+            <DinoContainer allDinosaurs={allDinosaurs}/>
+          </Route>
+          <Route path="/quiz">
+            <QuizContainer allDinosaurs={allDinosaurs}/>
+          </Route>
         </Switch>
       </Layout>
       </Router>

@@ -4,10 +4,10 @@ import Footer from './Footer';
 import '../styles/Layout.css'
 
 
-const Layout = ({ children, togglePage }) => {
+const Layout = ({ children }) => {
     return (
         <div id='layout'>
-            <Header togglePage={togglePage} />
+            <Header />
             <div id='content'>
             {children}
             </div>

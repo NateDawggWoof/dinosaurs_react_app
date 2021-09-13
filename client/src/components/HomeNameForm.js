@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 
-const HomeNameForm = ({saveUserName, togglePage}) => {
+
+const HomeNameForm = ({saveUserName, history}) => {
 const [firstName, setFirstName] = useState("")
 
 
@@ -9,7 +11,7 @@ const [firstName, setFirstName] = useState("")
     event.preventDefault()
     console.log(firstName)
     saveUserName(firstName)
-    togglePage('dinos')
+    history.push('/dinosaurs')
   }
 
   const onChange = event => {
@@ -30,4 +32,4 @@ const [firstName, setFirstName] = useState("")
   )
 }
 
-export default HomeNameForm;
+export default withRouter(HomeNameForm);

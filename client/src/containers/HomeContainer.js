@@ -5,14 +5,14 @@ import { withRouter } from 'react-router-dom';
 
 const HomeContainer = ({ saveUserName, history }) => {
   
-    const [popUpUserNameDisplay, setPopUpUserNameDisplay] = useState('on');
+    const [popUpUserNameDisplay, setPopUpUserNameDisplay] = useState('off');
     const onClickDirect = () => history.push('/dinosaurs');
 
     const showUserNamePopUp = () => {
-        if (popUpUserNameDisplay =='off'){
+        if (popUpUserNameDisplay == 'off'){
             return <></>
         } else {
-            return <HomeNameForm saveUserName={saveUserName} togglePage={togglePage}/>
+            return <HomeNameForm saveUserName={saveUserName}/>
         }
     }
      

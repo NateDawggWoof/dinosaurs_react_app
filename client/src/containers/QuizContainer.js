@@ -39,8 +39,6 @@ const QuizContainer = ({allDinosaurs }) => {
         //     return guesses[dino.name]===answers[dino.name]
         // }).length)
         console.log(getScore)
-        // togglePage("home")
-
         togglePopUp()
 
     }

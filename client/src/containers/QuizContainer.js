@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import QuizForm from "../components/QuizForm";
 import Score from "../components/Score";
 
-const QuizContainer = ({allDinosaurs, togglePage}) => {
+const QuizContainer = ({allDinosaurs }) => {
     const [answers, setAnswers] = useState({})
     const [guesses, setGuesses] = useState({})
     const [score, setScore] = useState(0)
@@ -66,7 +66,7 @@ const QuizContainer = ({allDinosaurs, togglePage}) => {
         if (popUpDisplay =='off'){
             return <></>
         } else {
-            return <Score score={score} togglePage={togglePage}/>
+            return <Score score={score} />
         }
     }
 
@@ -92,4 +92,4 @@ const QuizContainer = ({allDinosaurs, togglePage}) => {
     )
 }
 
-export default QuizContainer
+export default QuizContainer;

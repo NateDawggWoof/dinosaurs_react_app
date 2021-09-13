@@ -36,7 +36,7 @@ const HomeContainer = ({togglePage, saveUserName}) => {
 
             <header>
                 <div>
-                    <img id="logopic" src="./styles/images/logo.png" />
+                    <img id="logopic" src="../src/styles/images/logo.png" />
                     <h1 id="logo">JURASSIC APP</h1>
                 </div>
             </header>

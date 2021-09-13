@@ -27,11 +27,26 @@ const HomeContainer = ({togglePage, saveUserName}) => {
 
     return (
         <div id='homepage'>
-            <h1>Super Awesome HomeContainer</h1>
+            {/* <h1>Super Awesome HomeContainer</h1>
             <div id="user-name-popup">
                 {showUserNamePopUp()}
             </div>
-            <button onClick={() => {toggleUserNamePopUp()}}  id="save">Meet some dinos...</button>
+            <button onClick={() => {toggleUserNamePopUp()}}  id="save">Meet some dinos...</button> */}
+        
+
+            <header>
+                <div>
+                    <img id="logopic" src="logo.png" />
+                    <h1 id="logo">ROAR-SOME APP</h1>
+                </div>
+            </header>
+            <p>
+                <button  onClick={() => {toggleUserNamePopUp()}}  id="save"></button>
+                Meet The Dinosaurs
+            </p>
+            <div id="user-name-popup">
+                {showUserNamePopUp()}
+            </div>
         </div>
     )
 }

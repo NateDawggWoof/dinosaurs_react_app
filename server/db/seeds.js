@@ -1,12 +1,6 @@
 use dinos
 
-db.dropDataBase()
-
-/ //Version 2.0
-
-// //weight easier than size to use for quiz question
-// //size = length head to tail
-// //diplodoculus is not a species I could find?
+db.dropDatabase()
 
 db.dinosaurs.insertMany(
 

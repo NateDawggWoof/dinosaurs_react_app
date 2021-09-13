@@ -1,6 +1,6 @@
-use dinos
+use dinos;
 
-db.dropDataBase()
+db.dropDatabase()
 
 / //Version 2.0
 
@@ -99,45 +99,6 @@ db.dinosaurs.insertMany(
       }
     ]
   )
-// db.dinosaurs.insertMany(
 
-// [
-//     {
-//       "name": "Tyrannosaurus",
-//       "nickname": "Terry",
-//       "diet": "Carnivore",
-//       "img": "02.png"
-//     },
-//     {
-//       "name": "Triceratops",
-//       "nickname": "Tricky",
-//       "diet": "Herbivore",
-//       "img": "03.png"
-//     },
-//     {
-//       "name": "Pterodactyl",
-//       "nickname": "Terry",
-//       "diet": "Carnivore",
-//       "img": "04.png"
-//     },
-//     {
-//       "name": "Brontosaurus",
-//       "nickname": "Bobby",
-//       "diet": "Herbivore",
-//       "img": "01.png"
-//     },
-//     {
-//       "name": "Stegosaurus",
-//       "nickname": "Stig",
-//       "diet": "Herbivore",
-//       "img": "06.png"
-//     },
-//     {
-//       "name": "Diplodoculus",
-//       "nickname": "Dipi",
-//       "diet": "Herbivore",
-//       "img": "05.png"
-//     }
-//   ]
 
 

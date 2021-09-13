@@ -29,5 +29,6 @@ body{
     overflow:auto;
     justify-content:center;
     align-items:center;
+
     background: rgba(255, 255, 255, .93);
 }

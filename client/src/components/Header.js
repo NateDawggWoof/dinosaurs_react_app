@@ -9,7 +9,7 @@ const Header = ({ togglePage }) => {
             <div id='header-logo' onClick={() => togglePage('home')}><GiDiplodocus size='40' />&nbsp;DinoApp</div>
             <div id='header-tab'>
                 <div id='header-dinosaurs' onClick={() => togglePage('dinos')}>Dinosaurs</div>
-                <div id='header-quiz' onClick={() => togglePage('')}>Quiz</div>
+                <div id='header-quiz' onClick={() => togglePage('quiz')}>Quiz</div>
             </div>
         </header>
         </div>

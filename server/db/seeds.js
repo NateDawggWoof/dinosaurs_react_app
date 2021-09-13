@@ -3,10 +3,11 @@ use dinos;
 db.dropDatabase()
 
 / //Version 2.0
-
 // //weight easier than size to use for quiz question
 // //size = length head to tail
 // //diplodoculus is not a species I could find?
+=======
+
 
 db.dinosaurs.insertMany(
 
@@ -19,11 +20,11 @@ db.dinosaurs.insertMany(
         "img": "02.png",
         "period": "Cretaceous Period",
         "weight": "4,500 - 8,000 kg",
-        "fact": {
-            "1": "The name Tyrannosaurus Rex comes from Greek and Latin and means 'Tyrant Lizard King'.",
-            "2": "They had 50-60 teeth, which were each the size of a banana!",
-            "3": "Their huge tail helped to keep them balanced - just like a pet cat!"
-          }
+        "fact": [
+            "The name Tyrannosaurus Rex comes from Greek and Latin and means 'Tyrant Lizard King'.",
+            "They had 50-60 teeth, which were each the size of a banana!",
+            "Their huge tail helped to keep them balanced - just like a pet cat!"
+          ]
       },
       {
         "name": "Triceratops",
@@ -33,11 +34,11 @@ db.dinosaurs.insertMany(
         "img": "03.png",
         "period": "Cretaceous Period",
         "weight": "6,000 - 12,000 kg",
-        "fact": {
-            "1": "Triceratops means 'three-horned face'.",
-            "2": "Some triceratops had as many as 800 teeth!",
-            "3": "The horns of a triceratops reached over 1 metre in length. These horns helped them to defend themselves against predators such as the T.Rex."
-          }
+        "fact": [
+            "Triceratops means 'three-horned face'.",
+            "Some triceratops had as many as 800 teeth!",
+            "The horns of a triceratops reached over 1 metre in length. These horns helped them to defend themselves against predators such as the T.Rex."
+          ]
       },
       {
         "name": "Pterodactyl",
@@ -48,11 +49,11 @@ db.dinosaurs.insertMany(
         "img": "04.png",
         "period": "Jurassic Period",
         "weight": "40 kg",
-        "fact": {
-            "1": "The name Pterodactyl means 'winged finger'.",
-            "2": "Pterodactyls are not actually dinosaurs, but flying reptiles.",
-            "3": "A young Pterodactyl is called a flapling."
-          }
+        "fact": [
+          "The name Pterodactyl means 'winged finger'.",
+          "Pterodactyls are not actually dinosaurs, but flying reptiles.",
+          "A young Pterodactyl is called a flapling."
+        ]
       },
       {
         "name": "Brontosaurus",
@@ -62,11 +63,11 @@ db.dinosaurs.insertMany(
         "img": "01.png",
         "period": "Jurassic Period",
         "weight": "16,000 - 22,000 kg",
-        "fact": {
-            "1": "The name Brontosaurus means 'thunder lizard'.",
-            "2": "Their nostrils were on the top of their head!",
-            "3": "Scientists think that they may have lived until they were 100 years old."
-          }
+        "fact": [
+          "The name Brontosaurus means 'thunder lizard'.",
+          "Their nostrils were on the top of their head!",
+          "Scientists think that they may have lived until they were 100 years old."
+        ]
       },
       {
         "name": "Stegosaurus",
@@ -76,11 +77,11 @@ db.dinosaurs.insertMany(
         "img": "06.png",
         "period": "Jurassic Period",
         "weight": "1,800 kg",
-        "fact": {
-            "1": "The name Stegosaurus means 'roofed lizard'.",
-            "2": "Their brains were about the size of a ping-pong ball!",
-            "3": "The Stegosaurus was about the size of a bus."
-          },
+        "fact": [
+          "The name Stegosaurus means 'roofed lizard'.",
+          "Their brains were about the size of a ping-pong ball!",
+          "The Stegosaurus was about the size of a bus."
+        ]
       },
       {
         "name": "Diplodocus", 
@@ -91,11 +92,11 @@ db.dinosaurs.insertMany(
         "img": "05.png",
         "period": "Jurassic Period",
         "weight": "22,680 kg",
-        "fact": {
-            "1": "The name Diplodocus means 'double-beamed lizard'.",
-            "2": "They are the longest known dinosaur.",
-            "3": "Scientists argue about why the Diplodocus had such a long neck. Some think it was to feed on underwater plants, others think it was to battle rivals."
-          },
+        "fact": [
+          "The name Diplodocus means 'double-beamed lizard'.",
+          "They are the longest known dinosaur.",
+          "Scientists argue about why the Diplodocus had such a long neck. Some think it was to feed on underwater plants, others think it was to battle rivals."
+        ]
       }
     ]
   )

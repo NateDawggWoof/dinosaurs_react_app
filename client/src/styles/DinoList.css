@@ -85,6 +85,11 @@
     align-items: center;
     background: rgba(255, 255, 255, .93);
 }
+@media (max-width: 905px) { 
+    .dinoDetails-wrapper {
+        overflow-x: scroll;
+    }
+}
 .dinoDetails-content-wrapper {
     display: flex;
     flex-direction: column;
@@ -105,22 +110,39 @@
     color: rgb(215, 86, 86)
 }
 .dinoDetails-img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 95%;
+    max-height: 95%;
     width: auto;
     height: auto;
 }
-.dinoDetails-text-wrapper {
+.dinoDetails-text-wrapper, .dinoDetails-label {
     color: rgb(74, 74, 74);
 }
-.dinoDetails-nick, .dinoDetails-diet  {
+.dinoDetails-nick, .dinoDetails-diet, .dinoDetails-period {
     font-size: 1.75rem;
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
+    display: flex;
 }
+.dinoDetails-size, .dinoDetails-weight {
+    display: flex;
+}
+.dinoDetails-period { color: rgb(152, 51, 86) }
 .dinoDetails-nick { color: rgb(51, 83, 152) }
 .dinoDetails-diet { color: rgb(135, 51, 152) }
+.dinoDetails-size-weight-wrapper {
+    margin: 0.75rem 0;
+    font-size: 1.75rem;
+    color: rgb(152, 103, 51);
+}
+.dinoDetails-facts-wrapper {
+    display: flex;
+    flex-direction: column;
+}
 .dinoDetails-facts {
     font-size: 1.5rem;
-    color: rgb(201, 137, 68);
-    margin: 0.5rem 0;
+    padding: 0 1rem;
+    color: rgb(96, 96, 96);
+}
+.dinoDetails-one-fact {
+    margin: 0.25rem 0;  
 }

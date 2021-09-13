@@ -14,10 +14,6 @@ const QuizContainer = ({allDinosaurs, togglePage}) => {
         setGuesses({...guesses,[dino.name]:event.target.value})
     }
 
-    const quizAnswers = allDinosaurs.map((dino, index) => {
-        return (dino.diet)
-    })
-
     const getAnswers = allDinosaurs.reduce((acc, dino)=>{
         acc[dino.name]=dino.diet;
         return acc;

@@ -1,37 +1,39 @@
 import React from 'react';
-import { useState } from 'react';
+import { CgCloseR } from "react-icons/cg";
 
 const DinoDetails = ({ selectedDinosaur, onClickClose }, ) => {
     
-    // temporary style
-    const temporaryDiv = {
-        position: 'fixed',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100%',
-
-        display: 'flex',
-        justify_content: 'center',
-        align_items: 'center',
-        background: "grey",
-        opacity: '0.9'
-
-    }
-
-    const closeButton = {
-        position: 'absolute',
-        top: '50px',
-        right: '50px'
-    }
-    //no on-click in the close button
     return (
-        <div style={temporaryDiv}>
-             <button style={closeButton} onClick={onClickClose}>❌</button> 
-            <img alt={selectedDinosaur.name} src={`../image/${selectedDinosaur.img}`} />
-            <h2>{selectedDinosaur.name}</h2>
+        <div className='dinoDetails-wrapper'>
+                <img className='dinoDetails-img' alt={selectedDinosaur.name} src={`../image/${selectedDinosaur.img}`} />
+                <div className='dinoDetails-content-wrapper'>
+                    <div className='dinoDetails-name-close-wrapper'>
+                        <div className='dinoDetails-name'>{selectedDinosaur.name}</div>       
+                        <div className='dinoDetails-close' onClick={onClickClose}><CgCloseR size='50'/></div>
+                    </div>
+                    <div className='dinoDetails-text-wrapper'>
+                        <div className='dinoDetails-nick'><div className='dinoDetails-label'>Nickname:&nbsp;</div><b>{selectedDinosaur.nickname}</b></div>
+                        <div className='dinoDetails-period'><div className='dinoDetails-label'>Period:&nbsp;</div><b>{selectedDinosaur.period}</b></div>
+                        <div className='dinoDetails-diet'><div className='dinoDetails-label'>Diet:&nbsp;</div><b>{selectedDinosaur.diet}</b></div>
+                        <div className='dinoDetails-size-weight-wrapper'>
+                            <div className='dinoDetails-size'><div className='dinoDetails-label'>Size:&nbsp;</div><b>{selectedDinosaur.size}</b></div>
+                            <div className='dinoDetails-weight'><div className='dinoDetails-label'>Weight:&nbsp;</div><b>{selectedDinosaur.weight}</b></div>
+                        </div>
+
+                        <div className='dinoDetails-facts-wrapper'>
+                            <div className='dinoDetails-label'>Facts:</div>
+                            <div className='dinoDetails-facts'>
+                            {
+                                selectedDinosaur.fact.map((one, index) => {
+                                    return <div className='dinoDetails-one-fact'>{index + 1}: {one}</div>
+                                })
+                            }
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
-    )
+    )   
 }
 
 export default DinoDetails;

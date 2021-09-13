@@ -1,0 +1,72 @@
+#homepage {
+    background-color:darkolivegreen;  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;  
+    font-family: 'Bubblegum Sans', cursive;
+    border: 2px solid #465927;
+    margin: 10px auto;
+    width: 70%;
+    box-shadow: 6px 13px 10px #ccc;
+}
+
+#homeheader {
+    display: flex;
+    justify-content: center;
+    height: 475px;
+    padding: 100px auto;
+    width: 600px;
+    margin: auto;
+}
+
+#homeheader div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#logopic {
+    background-color: #f00;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid yellow;
+    width: 400px;
+    height: 375px;
+}
+
+#homepage h1 {
+    color: #f00;
+    font-weight: 100;
+    text-align: center;
+    font-size: 50px;
+    -webkit-text-stroke: 3px white;
+    background-color: #000;
+    border: 5px solid #ff0;
+    margin-top: -75px;
+    padding: 8px 8px;
+    box-shadow: 6px 13px 10px #465927;
+}
+
+#homepage p {
+    margin: -40px auto 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 30px;
+}
+
+p button {
+    background-image: url(./images/footprint.png);
+    display: block;
+    height: 150px;
+    width: 120px;
+    background-color: darkolivegreen;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 120px;
+    margin: auto;
+    background-blend-mode: overlay;
+}

@@ -1,0 +1,86 @@
+/* layout */
+#layout {
+    margin-top: 5rem;
+}
+
+/* header */
+#header-wrapper-block {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100%;
+    background: rgb(240, 240, 240);
+    border-bottom: 3.5px solid rgb(213, 213, 213);
+
+}
+#header-wrapper {
+    position: relative;
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Bubblegum Sans', cursive;
+}
+#header-logo {
+    cursor: pointer;
+    font-size: 2rem;
+    color: rgb(40, 150, 62);
+    font-weight: bold; 
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem;
+    border: 2px solid rgb(203, 203, 203);
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header-tab {
+    display: flex;
+    font-size: 1.5rem;
+}
+#header-dinosaurs {
+    cursor: pointer;
+    margin-right: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    color: rgb(213, 109, 109);
+    background: white;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(203, 203, 203);
+}
+#header-quiz {
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    color: rgb(138, 91, 191);
+    background: white;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(203, 203, 203);
+}
+
+/* footer */
+#footer-wrapper-block {
+    bottom: 0;
+    background: rgb(240, 240, 240);
+    border-top: 3.5px solid rgb(213, 213, 213);
+    height: 2.5rem;
+}
+#footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: rgb(82, 82, 82);
+    font-size: 0.85rem;
+    height: 100%;
+    width: 85%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#footer-text-wrapper {
+    display: flex;
+}
+#footer-text-1 {
+    margin-right: 1rem;
+}

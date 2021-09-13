@@ -1,0 +1,43 @@
+body{
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 28px;
+    margin-top: 19.92px;
+}
+
+section {
+    margin: auto;
+    width: 80%;
+    display:inline-flex;
+    flex-direction:row;
+    flex-flow:wrap;
+    flex-shrink: initial;
+}
+
+.close {
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    color: rgb(138, 91, 191);
+    background: white;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(203, 203, 203);
+    font-size: 1.5rem;
+    font-family: 'Bubblegum Sans', cursive;
+  }
+
+.scoreDetails {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display:grid;
+    overflow:auto;
+    justify-content:center;
+    align-items:center;
+
+    background: rgba(255, 255, 255, .93);
+}
+
+#quiz img {
+    border-radius: 5%;
+}

@@ -34,12 +34,12 @@ const HomeContainer = ({togglePage, saveUserName}) => {
             <button onClick={() => {toggleUserNamePopUp()}}  id="save">Meet some dinos...</button> */}
         
 
-            <header>
+            <div id="homeheader">
                 <div>
                     <img id="logopic" src="logo.png" />
                     <h1 id="logo">JURASSIC APP</h1>
                 </div>
-            </header>
+            </div>
             <p>
                 <button  onClick={() => {toggleUserNamePopUp()}}  id="save"></button>
                 Meet The Dinosaurs

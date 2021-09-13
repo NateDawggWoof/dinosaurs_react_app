@@ -1,6 +1,13 @@
-use dinos
+use dinos;
 
 db.dropDatabase()
+
+/ //Version 2.0
+// //weight easier than size to use for quiz question
+// //size = length head to tail
+// //diplodoculus is not a species I could find?
+=======
+
 
 db.dinosaurs.insertMany(
 
@@ -93,45 +100,6 @@ db.dinosaurs.insertMany(
       }
     ]
   )
-// db.dinosaurs.insertMany(
 
-// [
-//     {
-//       "name": "Tyrannosaurus",
-//       "nickname": "Terry",
-//       "diet": "Carnivore",
-//       "img": "02.png"
-//     },
-//     {
-//       "name": "Triceratops",
-//       "nickname": "Tricky",
-//       "diet": "Herbivore",
-//       "img": "03.png"
-//     },
-//     {
-//       "name": "Pterodactyl",
-//       "nickname": "Terry",
-//       "diet": "Carnivore",
-//       "img": "04.png"
-//     },
-//     {
-//       "name": "Brontosaurus",
-//       "nickname": "Bobby",
-//       "diet": "Herbivore",
-//       "img": "01.png"
-//     },
-//     {
-//       "name": "Stegosaurus",
-//       "nickname": "Stig",
-//       "diet": "Herbivore",
-//       "img": "06.png"
-//     },
-//     {
-//       "name": "Diplodoculus",
-//       "nickname": "Dipi",
-//       "diet": "Herbivore",
-//       "img": "05.png"
-//     }
-//   ]
 
 

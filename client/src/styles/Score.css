@@ -6,10 +6,11 @@ body{
 
 section {
     margin: auto;
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    align-content: stretch; 
+    width: 80%;
+    display:inline-flex;
+    flex-direction:row;
+    flex-flow:wrap;
+    flex-shrink: initial;
 }
 
 .close {
@@ -22,20 +23,6 @@ section {
     font-size: 1.5rem;
     font-family: 'Bubblegum Sans', cursive;
   }
-
-.scoreDetails {
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display:grid;
-    overflow:auto;
-    justify-content:center;
-    align-items:center;
-
-    background: rgba(255, 255, 255, .93);
-}
 
 #quiz img {
     border-radius: 5%;

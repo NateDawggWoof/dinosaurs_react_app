@@ -107,8 +107,8 @@ const handleOnDragEnd = (result) => {
           </header>
         </div>
 
-        <div>
-          <button onClick={correctAnswer}>SUBMIT ANSWERS</button>
+        <div id="dinoList-button-wrapper">
+          <button id="dinoList-button" onClick={correctAnswer}>SUBMIT ANSWERS</button>
         </div>
         </>
     )

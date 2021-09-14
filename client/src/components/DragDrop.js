@@ -103,22 +103,22 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 //   ]
 
 
-const DragDrop = ({alldinosaurs}) => {
+const DragDrop = ({allDinosaurs, handleOnDragEnd}) => {
     // const [dinosaurs, setDinosaurs] = useState(dinosaurCharacters);
 
-    const handleOnDragEnd = (result) => {
-      //to stop an error if the item is dragged outside the droppable area  
-      if (!result.destination) return;
-        //create a new array from the dinosaurs array
-        const items = Array.from(alldinosaurs);
-        //remove the item being moved from the original array
-        const [reorderedItem] = items.splice(result.source.index, 1);
-        //find the destination index so that we can put the item back into the array but at the index it's being moved to
-        items.splice(result.destination.index, 0, reorderedItem);
+    // const handleOnDragEnd = (result) => {
+    //   //to stop an error if the item is dragged outside the droppable area  
+    //   if (!result.destination) return;
+    //     //create a new array from the dinosaurs array
+    //     const items = Array.from(alldinosaurs);
+    //     //remove the item being moved from the original array
+    //     const [reorderedItem] = items.splice(result.source.index, 1);
+    //     //find the destination index so that we can put the item back into the array but at the index it's being moved to
+    //     items.splice(result.destination.index, 0, reorderedItem);
 
-        //update the state
-        setDinosaurs(items);
-      }
+    //     //update the state
+    //     setDinosaurs(items);
+    //   }
 
     return (
         <>
@@ -129,7 +129,7 @@ const DragDrop = ({alldinosaurs}) => {
               <Droppable droppableId="dinosaurs">
                 {(provided) => (
                   <ul className="dinosaurs" {...provided.droppableProps} ref={provided.innerRef}>
-                    {dinosaurs.map(({name, img}, index) => {
+                    {allDinosaurs.map(({name, img}, index) => {
                       return (
                         <Draggable key={name} draggableId={name} index={index}>
                           {(provided) => (

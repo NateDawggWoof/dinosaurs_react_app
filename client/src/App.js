@@ -25,6 +25,21 @@ const App = () => {
       })
     }, [])
 
+  
+  const handleOnDragEnd = (result) => {
+    //to stop an error if the item is dragged outside the droppable area  
+    if (!result.destination) return;
+      //create a new array from the dinosaurs array
+      const items = Array.from(allDinosaurs);
+      //remove the item being moved from the original array
+      const [reorderedItem] = items.splice(result.source.index, 1);
+      //find the destination index so that we can put the item back into the array but at the index it's being moved to
+      items.splice(result.destination.index, 0, reorderedItem);
+
+      //update the state
+      setAllDinosaurs(items);
+    }
+
   return (
     <>
       <Router>
@@ -40,7 +55,7 @@ const App = () => {
             <QuizContainer allDinosaurs={allDinosaurs}/>
           </Route>
           <Route path="/dragdrop">
-            <DragDrop allDinosaurs={allDinosaurs}/>
+            <DragDrop allDinosaurs={allDinosaurs} handleOnDragEnd={handleOnDragEnd}/>
           </Route>
         </Switch>
       </Layout>

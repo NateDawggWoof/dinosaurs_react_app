@@ -6,6 +6,7 @@ import HomeContainer from './containers/HomeContainer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import Layout from './components/Layout';
+import DragDrop from './components/DragDrop';
 
 const App = () => {
 
@@ -17,12 +18,12 @@ const App = () => {
     setUserName(firstName)
   }
 
-    useEffect(() => {
-      dinoService.getDinosaurs()
-        .then((allDinosaurs) => {
-          setAllDinosaurs(allDinosaurs);
-        })
-      }, [])
+  useEffect(() => {
+    dinoService.getDinosaurs()
+      .then((allDinosaurs) => {
+        setAllDinosaurs(allDinosaurs);
+      })
+    }, [])
 
   return (
     <>
@@ -37,6 +38,9 @@ const App = () => {
           </Route>
           <Route path="/quiz">
             <QuizContainer allDinosaurs={allDinosaurs}/>
+          </Route>
+          <Route path="/dragdrop">
+            <DragDrop allDinosaurs={allDinosaurs}/>
           </Route>
         </Switch>
       </Layout>

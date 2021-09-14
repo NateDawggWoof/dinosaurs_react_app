@@ -1,10 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { withRouter } from 'react-router-dom';
 import '../styles/DragDrop.css'
 
 const DragDrop = ({allDinosaurs}) => {
 
-  const [dragDinosaurs, setDragDinosaurs] = useState([...allDinosaurs])
+  const [dragDinosaurs, setDragDinosaurs] = useState([])
+
+  useEffect(() => {
+    console.log('all', allDinosaurs)
+    console.log('all', allDinosaurs)
+    console.log('all', allDinosaurs)
+    const newArray = [...allDinosaurs];
+    console.log('newArr', newArray)
+    console.log('newArr', newArray)
+    console.log('newArr', newArray)
+
+    setDragDinosaurs(newArray)
+    }, [allDinosaurs])
+
+
+    if (allDinosaurs.length === 0) {
+      return 'Loading'
+    }
 
 //DragDropContext should be wrapped around the bit of the app you want to use Drag and Drop e.g. the list of dinosaurs. Nested is not supported.
 
@@ -29,7 +47,7 @@ const handleOnDragEnd = (result) => {
   
 //get the nicknames into an array
     const findNicknames = () => {
-        const items = Array.from(allDinosaurs)
+        const items = Array.from(dragDinosaurs)
         return items.map(({nickname}) => {
           return nickname
         }
@@ -44,8 +62,12 @@ const handleOnDragEnd = (result) => {
 
     //compare the array where items are being dragged to the array returned from the getAlphabeticalNicknames function
 
-
-
+    const onSubmitAnswer = () => {
+      const rightAnswers = dragDinosaurs.filter((dino, index) => {
+        return dino.nickname === getAlphabeticalNicknames[index]
+      })
+      console.log(rightAnswers.length)
+    }
     
 
     return (
@@ -80,8 +102,12 @@ const handleOnDragEnd = (result) => {
             </DragDropContext>
           </header>
         </div>
+
+        <div>
+          <button onClick={onSubmitAnswer}>This is a very important button</button>
+        </div>
         </>
     )
 }
 
-export default DragDrop;
+export default withRouter(DragDrop);

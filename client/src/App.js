@@ -40,7 +40,7 @@ const App = () => {
             <QuizContainer allDinosaurs={allDinosaurs}/>
           </Route>
           <Route path="/dragdrop">
-            <DragDrop allDinosaurs={allDinosaurs}/>
+              <DragDrop allDinosaurs={allDinosaurs}/>
           </Route>
         </Switch>
       </Layout>

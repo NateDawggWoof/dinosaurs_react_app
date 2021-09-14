@@ -25,7 +25,7 @@ const App = () => {
       })
     }, [])
 
-  
+  //for DragDrog.js
   const handleOnDragEnd = (result) => {
     //to stop an error if the item is dragged outside the droppable area  
     if (!result.destination) return;

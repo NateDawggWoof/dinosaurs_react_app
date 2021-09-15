@@ -56,7 +56,7 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
             <h2>{finalMessage}</h2>
             <h3>{finalMessageRevealWord}</h3>
             <div>{winDino}</div>
-            <button onClick={playAgain}>Play Again</button>
+            <button id="scrabble-button" onClick={playAgain}>Play Again</button>
         </div>
         </div>
     );

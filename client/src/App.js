@@ -60,7 +60,7 @@ const App = () => {
            </Route>
 
           <Route path="/games/scrabble" exact>
-              <DinoScrabble allDinosaurs={allDinosaurs}/>
+              <DinoScrabble/>
           </Route>
 
           <Route path="/games/blockparty" exact>

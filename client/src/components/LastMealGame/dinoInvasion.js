@@ -1,5 +1,7 @@
-export const invasionGame = (canvas, setDinoX) => {
-    
+export const invasionGame = (canvas, playing) => {
+    if (playing === false) {
+        return;
+    }
     // * Canvas states
     const ctx = canvas.getContext('2d');
         
@@ -45,6 +47,7 @@ export const invasionGame = (canvas, setDinoX) => {
     }
 
     function eachFalling (item, index) {
+        
         function falling() {
             if (healthBar < 1) {
                 alert('Game Over, play again?')
@@ -100,7 +103,6 @@ export const invasionGame = (canvas, setDinoX) => {
     function dinoMouse () {
         canvas.addEventListener("mousemove", (e) => {
             if (healthBar < 1) return;
-            console.log(e);
             if (e.movementX < 0) {
                 dinoBackground();
                 drawText();

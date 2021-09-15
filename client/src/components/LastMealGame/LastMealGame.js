@@ -1,16 +1,16 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import * as dinoInvasion from './dinoInvasion';
 
 const LastMealGame = () => {
     
+    const [playing, setPlaying] = useState(true)
     const canvasRef = useRef();
     useEffect(() => {
         alert('Welcome to Dino Game!')
         const canvas = canvasRef.current;
-        dinoInvasion.invasionGame(canvas);
+        dinoInvasion.invasionGame(canvas, playing);
         return () => {
-            const ctx = canvas.getContext('2d');
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            setPlaying(!playing)
         }
     }, [])
 

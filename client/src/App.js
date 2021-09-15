@@ -29,7 +29,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <Layout>
+        <Layout userName={userName}>
         <Switch>
           <Route path="/" exact>
             <HomeContainer saveUserName={saveUserName} allDinosaurs={allDinosaurs}/>
@@ -43,7 +43,7 @@ const App = () => {
           </Route>
            {/* our games routes */}
           <Route path="/games/dragdrop">
-              <DragDropContainer allDinosaurs={allDinosaurs}/>
+            <DragDropContainer allDinosaurs={allDinosaurs}/>
           </Route>
           <Route path="/games/lastmeal">
             <LastMealContainer allDinosaurs={allDinosaurs}/>

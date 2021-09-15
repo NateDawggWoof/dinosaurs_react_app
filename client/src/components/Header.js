@@ -2,10 +2,14 @@ import React from 'react';
 import { GiDiplodocus } from "react-icons/gi";
 import { withRouter } from 'react-router-dom';
 
-const Header = ({ history }) => {
+const Header = ({ history, userName }) => {
 
     const onClickHome = () => history.push('/')
     const onClickTab = (e) => {
+        if (userName === '') {
+            
+            return
+        }
         const stringURL = e.target.innerHTML.toLowerCase();
         history.push(`/${stringURL}`)
     }
@@ -15,8 +19,9 @@ const Header = ({ history }) => {
         <header id='header-wrapper'>
             <div id='header-logo' onClick={onClickHome}><GiDiplodocus size='40' />&nbsp;Home</div>
             <div id='header-tab'>
-                <div id='header-dinosaurs' onClick={onClickTab}>Dinosaurs</div>
-                <div id='header-quiz' onClick={onClickTab}>Quiz</div>
+                <div id='header-dinosaurs' onClick={onClickTab}>Games</div>
+                {/* <div id='header-dinosaurs' onClick={onClickTab}>Dinosaurs</div>
+                <div id='header-quiz' onClick={onClickTab}>Quiz</div> */}
             </div>
         </header>
         </div>

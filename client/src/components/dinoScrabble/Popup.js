@@ -19,17 +19,17 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
 
     const winDino = () => {
         if (selectedWord === "tyra") {
-            return <div><img style ={{width: 160,height: 160}} src={`..../public/image/02.png`}/></div>
+            return <div><p>Congratulations! You won!</p><p>This is: {selectedWord}</p><img style ={{width: 200,height: 200}} src={`/image/02.png`}/></div>
         } else if (selectedWord === "tricky"){
-            <div><img style ={{width: 160,height: 160}} src={`..../public/image/03.png`}/></div>  
+            return <div><p>Congratulations! You won!</p><p>This is: {selectedWord}</p><img style ={{width: 200,height: 200}} src={`/image/03.png`}/></div> 
         } else if (selectedWord === "terry"){
-            return <div><img style ={{width: 160,height: 160}} src={`..../public/image/04.png`}/></div>  
+            return <div><p>Congratulations! You won!</p><p>This is: {selectedWord}</p><img style ={{width: 300,height: 300}} src={`/image/04.png`}/></div> 
         } else if (selectedWord === "emily"){
-            return <div><img style ={{width: 160,height: 160}} src={`../../../public/image/01.png`}/></div>  
+            return <div><p>Congratulations! You won!</p><p>This is: {selectedWord}</p><img style ={{width: 300,height: 300}} src={`/image/01.png`}/></div>  
         } else if (selectedWord === "stig"){
-            return <div><img style ={{width: 160,height: 160}} src={`..../public/image/06.png`}/></div>  
+            return <div><p>Congratulations! You won!</p><p>This is: {selectedWord}</p><img style ={{width: 300,height: 300}} src={`/image/06.png`}/></div>  
         } else {
-            return <div><img style ={{width: 160,height: 160}} src={`../../../public/image/05.png`}/></div>  
+            return <div><p>Congratulations! You won!</p><p>This is: {selectedWord}</p><img style ={{width: 300,height: 300}} src={`/image/05.png`}/></div>  
         } 
     }
 
@@ -38,7 +38,7 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
     let playable = true;
 
     if (checkWin(correctLetters, wrongLetters, selectedWord) === "win") {
-        finalMessage = `Congratulations! You won! ${winDino}`;
+        finalMessage = winDino();
         playable = false;
     } else if (checkWin(correctLetters, wrongLetters, selectedWord) === "lose") {
         finalMessage = "Try Again! ";

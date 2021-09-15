@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout';
 import DragDropContainer from './containers/DragDropContainer';
+import PageNotFound from './components/404-page';
 
 const App = () => {
 
@@ -34,7 +35,7 @@ const App = () => {
           <Route path="/" exact>
             <HomeContainer saveUserName={saveUserName} allDinosaurs={allDinosaurs}/>
           </Route>
-          <Route path="/dinosaurs">
+          <Route path="/dinosaurs" exact>
             <DinoContainer allDinosaurs={allDinosaurs}/>
           </Route>
           <Route path="/games" exact>
@@ -42,12 +43,13 @@ const App = () => {
             <QuizContainer allDinosaurs={allDinosaurs}/>
           </Route>
            {/* our games routes */}
-          <Route path="/games/dragdrop">
+          <Route path="/games/dragdrop" exact>
               <DragDropContainer allDinosaurs={allDinosaurs}/>
           </Route>
-          <Route path="/games/lastmeal">
+          <Route path="/games/lastmeal" exact>
             <LastMealContainer allDinosaurs={allDinosaurs}/>
           </Route>
+          <Route component={PageNotFound} />
         </Switch>
       </Layout>
       </Router>

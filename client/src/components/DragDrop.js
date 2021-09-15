@@ -40,7 +40,7 @@ const handleOnDragEnd = (result) => {
   
 //get the nicknames into an array
     const findNicknames = () => {
-        const items = Array.from(dragDinosaurs)
+        const items = dragDinosaurs
         return items.map(({nickname}) => {
           return nickname
         }

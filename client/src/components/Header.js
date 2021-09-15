@@ -13,7 +13,7 @@ const Header = ({ history }) => {
     return (
         <div id='header-wrapper-block'>
         <header id='header-wrapper'>
-            <div id='header-logo' onClick={onClickHome}><GiDiplodocus size='40' />&nbsp;DinoApp</div>
+            <div id='header-logo' onClick={onClickHome}><GiDiplodocus size='40' />&nbsp;Home</div>
             <div id='header-tab'>
                 <div id='header-dinosaurs' onClick={onClickTab}>Dinosaurs</div>
                 <div id='header-quiz' onClick={onClickTab}>Quiz</div>

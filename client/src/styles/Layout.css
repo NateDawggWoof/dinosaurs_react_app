@@ -1,6 +1,6 @@
 /* layout */
 #layout {
-    margin-top: 5rem;
+    margin-top: 60px;
 }
 
 /* header */
@@ -9,7 +9,7 @@
     z-index: 5;
     top: 0;
     left: 0;
-    height: 5rem;
+    height: 4.5rem;
     width: 100%;
     background: rgb(240, 240, 240);
     border-bottom: 3.5px solid rgb(213, 213, 213);
@@ -27,10 +27,10 @@
 }
 #header-logo {
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: rgb(40, 150, 62);
     font-weight: bold; 
-    padding: 0.5rem 0.75rem;
+    padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     border: 2px solid rgb(203, 203, 203);
     background: white;
@@ -40,7 +40,7 @@
 }
 #header-tab {
     display: flex;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 #header-dinosaurs {
     cursor: pointer;
@@ -63,9 +63,11 @@
 /* footer */
 #footer-wrapper-block {
     bottom: 0;
+    width: 100%;
+    position: fixed;
     background: rgb(240, 240, 240);
     border-top: 3.5px solid rgb(213, 213, 213);
-    height: 2.5rem;
+    height: 1.75rem;
 }
 #footer-wrapper {
     display: flex;

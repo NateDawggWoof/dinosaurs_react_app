@@ -4,8 +4,7 @@ import WrongLetters from "../components/dinoScrabble/WrongLetters";
 import Word from "../components/dinoScrabble/Word";
 import Popup from "../components/dinoScrabble/Popup";
 import Notification from "../components/dinoScrabble/Notification";
-import "../styles/scrabble/App.css";
-// import DinoList from '../components/DinoList';
+import "../styles/Scrabble.css";
 
 const words = [
     "tyra",
@@ -69,7 +68,8 @@ function DinoScrabble() {
   }
 
   return (
-    <>
+      <div id="test">
+    <div className="scrabble-body">
       <Home />
       <div className="game-container">
         <WrongLetters wrongLetters={wrongLetters} />
@@ -77,7 +77,8 @@ function DinoScrabble() {
       </div>
       <Popup words={words} correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain} />
       <Notification showNotification={showNotification} />
-    </>
+    </div>
+    </div>
   );
 }
 

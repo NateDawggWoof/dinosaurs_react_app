@@ -26,7 +26,7 @@ const Home = ({history}) => {
         <h1>Guess Dino's Name</h1>
         <button onClick={onClickHome}><GiDiplodocus size='40' />&nbsp;DinoApp</button>
         <button onClick={onClickTab}>Dinosaurs</button>
-        <button onClick={onClickTab}>Quiz</button>
+        <button onClick={onClickTab}>Games</button>
         <button onClick={HandleButton}>Rules</button>
         </>
     );

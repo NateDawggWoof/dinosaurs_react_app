@@ -21,10 +21,9 @@ const [firstName, setFirstName] = useState("")
   return (
     <div>
      <form onSubmit={onSubmit}>
-        <label htmlFor="first-name">Write your name here:
-        <input onChange={onChange} type="text" id="first-name"></input></label>
-      <input type="submit" value="Save name"></input>
-        
+        <label htmlFor="first-name">Enter your name?</label>
+        <input onChange={onChange} type="text" id="first-name"></input>
+        <input id="namesubmit" type="submit" value="Save"></input>
     </form>
     </div>
   )

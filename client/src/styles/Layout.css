@@ -9,7 +9,7 @@
     z-index: 5;
     top: 0;
     left: 0;
-    height: 5rem;
+    height: 4.5rem;
     width: 100%;
     background: rgb(240, 240, 240);
     border-bottom: 3.5px solid rgb(213, 213, 213);
@@ -64,10 +64,10 @@
 #footer-wrapper-block {
     bottom: 0;
     width: 100%;
-    position: absolute;
+    position: fixed;
     background: rgb(240, 240, 240);
     border-top: 3.5px solid rgb(213, 213, 213);
-    height: 2.5rem;
+    height: 1.75rem;
 }
 #footer-wrapper {
     display: flex;

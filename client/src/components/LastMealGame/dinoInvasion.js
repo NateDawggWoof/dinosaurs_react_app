@@ -40,7 +40,6 @@ export const invasionGame = (canvas) => {
     }
 
     function setUpFallings () {
-        if (playingStatus === false) return;
         for (let i = 0; i < fallings_num; i++) {
             let number = Math.round(Math.random())
             if (number === 0) {

@@ -4,10 +4,10 @@ import Footer from './Footer';
 import '../styles/Layout.css'
 
 
-const Layout = ({ children, userName }) => {
+const Layout = ({ children, userName, setUserName }) => {
     return (
         <div id='layout'>
-            <Header userName={userName} />
+            <Header userName={userName} setUserName={setUserName} />
             <div id='content'>
             {children}
             </div>

@@ -5,8 +5,6 @@ import { withRouter } from 'react-router-dom';
 const HomeNameForm = ({saveUserName, history}) => {
 const [firstName, setFirstName] = useState("")
 
-
-
   const onSubmit = event => {
     event.preventDefault()
     console.log(firstName)

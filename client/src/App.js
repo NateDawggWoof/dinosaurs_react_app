@@ -29,7 +29,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <Layout userName={userName}>
+        <Layout userName={userName} setUserName={setUserName}>
         <Switch>
           <Route path="/" exact>
             <HomeContainer saveUserName={saveUserName} allDinosaurs={allDinosaurs}/>

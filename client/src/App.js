@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import Layout from './components/Layout';
 import DragDrop from './components/DragDrop';
+import { DragDropContext } from 'react-beautiful-dnd';
 
 const App = () => {
 
@@ -40,7 +41,7 @@ const App = () => {
             <QuizContainer allDinosaurs={allDinosaurs}/>
           </Route>
           <Route path="/dragdrop">
-              <DragDrop allDinosaurs={allDinosaurs}/>
+              <DragDropContainer allDinosaurs={allDinosaurs}/>
           </Route>
         </Switch>
       </Layout>

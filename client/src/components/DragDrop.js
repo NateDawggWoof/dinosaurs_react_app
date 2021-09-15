@@ -55,20 +55,21 @@ const handleOnDragEnd = (result) => {
 
   //compare the array where items are being dragged to the array returned from the getAlphabeticalNicknames function
 
-    // const onSubmitAnswer = () => {
-    //   const rightAnswers = dragDinosaurs.filter((dino, index) => {
-    //     return dino.nickname === getAlphabeticalNicknames[index]
-    //   })
-    //   console.log(rightAnswers.length)
-    // }
-  
     const correctAnswer = () => {
-      if (getAlphabeticalNicknames() === dragDinosaurs) {
-        return "Congratulations. You're an alphabet whiz!"
+      if (getAlphabeticalNicknames() == findNicknames) {
+        console.log("Congratulations. You're an alphabet whiz!")
       } else {
-        return "The names are still not in alphebetical order. Try again."
+        console.log(`first` , getAlphabeticalNicknames())
+        console.log(`second` , dragDinosaurs)
+        console.log("The names are still not in alphebetical order. Try again.")
       }
     }
+
+    console.log(correctAnswer())
+
+    // const handleClic = () => {
+    //   return correctAnswer()
+    // }
     
 
   
@@ -108,7 +109,7 @@ const handleOnDragEnd = (result) => {
         </div>
 
         <div id="dinoList-button-wrapper">
-          <button id="dinoList-button" onClick={correctAnswer}>SUBMIT ANSWERS</button>
+          <button id="dinoList-button">SUBMIT ANSWERS</button>
         </div>
         </>
     )

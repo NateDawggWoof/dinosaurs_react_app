@@ -3,8 +3,10 @@ import DinoContainer from './containers/DinoContainer';
 import * as dinoService from './service';
 import QuizContainer from './containers/QuizContainer';
 import HomeContainer from './containers/HomeContainer';
+import DinoScrabble from './containers/DinoScrabble';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import LastMealContainer from './containers/LastMealContainer';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Blockparty from './containers/BlockPartyGame';
 import './App.css';
 import Layout from './components/Layout';
 import DragDropContainer from './containers/DragDropContainer';
@@ -39,7 +41,6 @@ const App = () => {
             <DinoContainer allDinosaurs={allDinosaurs}/>
           </Route>
           <Route path="/games" exact>
-            {/* will be changed to GamesContainer once created */}
             <QuizContainer allDinosaurs={allDinosaurs}/>
           </Route>
            {/* our games routes */}
@@ -48,8 +49,14 @@ const App = () => {
           </Route>
           <Route path="/games/lastmeal" exact>
             <LastMealContainer allDinosaurs={allDinosaurs}/>
+          <Route path="/games/scrabble">
+              <DinoScrabble allDinosaurs={allDinosaurs}/>
           </Route>
-          <Route component={PageNotFound} />
+          <Route path="/games/blockparty">
+            <Blockparty/>
+          </Route>
+          <Route component={PageNotFound}>
+          </Route>
         </Switch>
       </Layout>
       </Router>

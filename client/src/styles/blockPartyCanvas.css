@@ -1,0 +1,13 @@
+#canvas{
+    background-color: rgba(0, 128, 0, 0.733);
+    border-radius: 20px;
+}
+
+#blockPartyBackground {
+    background-image: url(https://m.media-amazon.com/images/I/61zlJlh8r7L._AC_SL1000_.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

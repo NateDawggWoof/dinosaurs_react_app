@@ -3,30 +3,32 @@ import DinoContainer from './containers/DinoContainer';
 import * as dinoService from './service';
 import QuizContainer from './containers/QuizContainer';
 import HomeContainer from './containers/HomeContainer';
+import DinoScrabble from './containers/DinoScrabble';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import Layout from './components/Layout';
 
 const App = () => {
 
-  const [allDinosaurs, setAllDinosaurs] = useState([]);
-  const [userName, setUserName] = useState("");
+  // const [allDinosaurs, setAllDinosaurs] = useState([]);
+  // const [userName, setUserName] = useState("");
 
-  // sets userName from HomeContainer
-  const saveUserName = (firstName) => {
-    setUserName(firstName)
-  }
+  // // sets userName from HomeContainer
+  // const saveUserName = (firstName) => {
+  //   setUserName(firstName)
+  // }
 
-    useEffect(() => {
-      dinoService.getDinosaurs()
-        .then((allDinosaurs) => {
-          setAllDinosaurs(allDinosaurs);
-        })
-      }, [])
+  //   useEffect(() => {
+  //     dinoService.getDinosaurs()
+  //       .then((allDinosaurs) => {
+  //         setAllDinosaurs(allDinosaurs);
+  //       })
+  //     }, [])
 
   return (
     <>
-      <Router>
+    <DinoScrabble/>
+      {/* <Router>
         <Layout>
         <Switch>
           <Route exact path="/">
@@ -40,7 +42,7 @@ const App = () => {
           </Route>
         </Switch>
       </Layout>
-      </Router>
+      </Router> */}
     </>
   );
 }

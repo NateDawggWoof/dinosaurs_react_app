@@ -10,6 +10,7 @@ import Blockparty from './containers/BlockPartyGame';
 import './App.css';
 import Layout from './components/Layout';
 import DragDropContainer from './containers/DragDropContainer';
+import PageNotFound from './components/404-page';
 
 const App = () => {
 
@@ -36,23 +37,25 @@ const App = () => {
           <Route path="/" exact>
             <HomeContainer saveUserName={saveUserName} allDinosaurs={allDinosaurs}/>
           </Route>
-          <Route path="/dinosaurs">
+          <Route path="/dinosaurs" exact>
             <DinoContainer allDinosaurs={allDinosaurs}/>
           </Route>
           <Route path="/games" exact>
             <QuizContainer allDinosaurs={allDinosaurs}/>
           </Route>
-          <Route path="/games/dragdrop">
+           {/* our games routes */}
+          <Route path="/games/dragdrop" exact>
               <DragDropContainer allDinosaurs={allDinosaurs}/>
           </Route>
+          <Route path="/games/lastmeal" exact>
+            <LastMealContainer allDinosaurs={allDinosaurs}/>
           <Route path="/games/scrabble">
               <DinoScrabble allDinosaurs={allDinosaurs}/>
           </Route>
-          <Route path="/games/lastmeal">
-            <LastMealContainer allDinosaurs={allDinosaurs}/>
-          </Route>
           <Route path="/games/blockparty">
             <Blockparty/>
+          </Route>
+          <Route component={PageNotFound}>
           </Route>
         </Switch>
       </Layout>

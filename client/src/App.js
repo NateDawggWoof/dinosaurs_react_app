@@ -4,6 +4,7 @@ import * as dinoService from './service';
 import QuizContainer from './containers/QuizContainer';
 import HomeContainer from './containers/HomeContainer';
 import LastMealContainer from './containers/LastMealContainer';
+import Blockparty from './containers/BlockPartyGame';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout';
@@ -47,6 +48,9 @@ const App = () => {
           </Route>
           <Route path="/games/lastmeal">
             <LastMealContainer allDinosaurs={allDinosaurs}/>
+          </Route>
+          <Route path="/games/blockparty">
+            <Blockparty/>
           </Route>
         </Switch>
       </Layout>

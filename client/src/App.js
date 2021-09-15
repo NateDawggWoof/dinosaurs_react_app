@@ -3,7 +3,8 @@ import DinoContainer from './containers/DinoContainer';
 import * as dinoService from './service';
 import QuizContainer from './containers/QuizContainer';
 import HomeContainer from './containers/HomeContainer';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import LastMealContainer from './containers/LastMealContainer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout';
 import DragDropContainer from './containers/DragDropContainer';
@@ -30,17 +31,22 @@ const App = () => {
       <Router>
         <Layout>
         <Switch>
-          <Route exact path="/">
+          <Route path="/" exact>
             <HomeContainer saveUserName={saveUserName} allDinosaurs={allDinosaurs}/>
           </Route>
           <Route path="/dinosaurs">
             <DinoContainer allDinosaurs={allDinosaurs}/>
           </Route>
-          <Route path="/quiz">
+          <Route path="/games" exact>
+            {/* will be changed to GamesContainer once created */}
             <QuizContainer allDinosaurs={allDinosaurs}/>
           </Route>
+           {/* our games routes */}
           <Route path="/games/dragdrop">
               <DragDropContainer allDinosaurs={allDinosaurs}/>
+          </Route>
+          <Route path="/games/lastmeal">
+            <LastMealContainer allDinosaurs={allDinosaurs}/>
           </Route>
         </Switch>
       </Layout>

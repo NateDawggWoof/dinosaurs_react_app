@@ -4,10 +4,10 @@ const Footer = () => {
     return (
         <div id='footer-wrapper-block'>
         <footer id='footer-wrapper'>
-            <div id='footer-copyright'>&copy; Copyright blah</div>
+            <div id='footer-copyright'>&copy; Copyright Jurassic 5</div>
             <div id='footer-text-wrapper'>
-                <div id='footer-text-1'>Blah and Blah</div>
-                <div id='footer-text-2'>More blah</div>
+                <div id='footer-text-1'>Jurassic 5</div>
+                <div id='footer-text-2'>E51 JS Project, 2021</div>
             </div>
         </footer>
         </div>

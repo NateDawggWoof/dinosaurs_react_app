@@ -1,0 +1,148 @@
+/* DinoList */
+#gamesList-wrapper-block {
+    margin: 0 auto;
+    margin-top: 7.5rem;
+    margin-bottom: 2rem;
+    width: 80%;
+}
+#gamesList-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    color: rgb(99, 99, 99);
+}
+#gamesList-title {
+    color: rgb(89, 89, 89);
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+#gamesList-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+#gamesList-button {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.5rem;
+    padding: 0.75rem 1rem;
+    margin: 1.5rem 0;
+    border-radius: 1rem;
+    background: rgb(255, 255, 255);
+    color: rgb(138, 91, 191);
+    border: 2px solid rgb(155, 155, 155);
+    cursor: pointer;
+}
+
+/* gameItem */
+.gameItems-wrapper {
+    box-sizing: border-box;
+    border: 3px solid rgb(211, 211, 211);
+    display: 'flex';
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background: rgb(247, 247, 247);
+    width: 250px;
+    height: 235px;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    margin: 1rem;
+}
+.gameItems-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 180px;
+    height: 180px;
+}
+.gameItems-img {
+    max-width:175px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+.gameItems-name {
+    font-size: 1.75rem;
+    font-family: 'Bubblegum Sans', cursive;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+
+/* gameDetails */
+.gameDetails-wrapper {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, .93);
+}
+@media (max-width: 905px) { 
+    .gameDetails-wrapper {
+        overflow-x: scroll;
+    }
+}
+.gameDetails-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bubblegum Sans', cursive;
+    width: 40vw;
+}
+.gameDetails-name-close-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.gameDetails-name {
+    font-size: 4rem;
+    color: rgb(51, 152, 74);
+    margin: 1rem 0;
+}
+.gameDetails-close {
+    color: rgb(215, 86, 86)
+}
+.gameDetails-img {
+    max-width: 95%;
+    max-height: 95%;
+    width: auto;
+    height: auto;
+}
+.gameDetails-text-wrapper, .gameDetails-label {
+    color: rgb(74, 74, 74);
+}
+.gameDetails-nick, .gameDetails-diet, .gameDetails-period {
+    font-size: 1.75rem;
+    margin: 0.75rem 0;
+    display: flex;
+}
+.gameDetails-size, .gameDetails-weight {
+    display: flex;
+}
+.gameDetails-period { color: rgb(152, 51, 86) }
+.gameDetails-nick { color: rgb(51, 83, 152) }
+.gameDetails-diet { color: rgb(135, 51, 152) }
+.gameDetails-size-weight-wrapper {
+    margin: 0.75rem 0;
+    font-size: 1.75rem;
+    color: rgb(152, 103, 51);
+}
+.gameDetails-facts-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.gameDetails-facts {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    color: rgb(96, 96, 96);
+}
+.gameDetails-one-fact {
+    margin: 0.25rem 0;  
+}

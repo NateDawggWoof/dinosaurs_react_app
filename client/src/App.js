@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout';
 import DragDropContainer from './containers/DragDropContainer';
+import { CgGames } from 'react-icons/cg';
+import GamesContainer from './containers/Games';
 
 const App = () => {
 
@@ -40,7 +42,7 @@ const App = () => {
           </Route>
           <Route path="/games" exact>
             {/* will be changed to GamesContainer once created */}
-            <QuizContainer allDinosaurs={allDinosaurs}/>
+            <GamesContainer allDinosaurs={allDinosaurs} userName = {userName}/>
           </Route>
            {/* our games routes */}
           <Route path="/games/dragdrop">
@@ -51,6 +53,9 @@ const App = () => {
           </Route>
           <Route path="/games/blockparty">
             <Blockparty/>
+          </Route>
+          <Route path="/games/quiz">
+          <QuizContainer allDinosaurs={allDinosaurs}/>
           </Route>
         </Switch>
       </Layout>

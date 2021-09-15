@@ -34,7 +34,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <Layout>
+        <Layout userName={userName} setUserName={setUserName}>
         <Switch>
     
           <Route path="/" exact>
@@ -50,6 +50,7 @@ const App = () => {
           </Route>
 
            {/* our games routes */}
+
           <Route path="/games/dragdrop" exact>
               <DragDropContainer allDinosaurs={allDinosaurs}/>
           </Route>

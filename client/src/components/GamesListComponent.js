@@ -8,7 +8,7 @@ const gamesListComponent = ({ allDinosaurs, userName, history}) => {
     const onClickDirect2 = () => history.push('/games/lastmeal')
     const onClickDirect3 = () => history.push('/games/dragdrop')
     const onClickDirect4 = () => history.push('/games/blockparty')
-    // const onClickDirect5 = () => history.push('/*****')
+    const onClickDirect5 = () => history.push('/games/scrabble')
 
         
     
@@ -54,14 +54,14 @@ const gamesListComponent = ({ allDinosaurs, userName, history}) => {
             </div>
             </div>
 
-            {/* <div className='gameItems-wrapper' onClick={handleSelected} onClick={onClickDirect5}>
+            <div className='gameItems-wrapper' onClick={onClickDirect5}>
             <div className='gameItems-img-wrapper'>
                 <input type="image" src="http://example.com/path/to/image.png" />
             </div>
             <div className='gameItems-name'>
                 <h3>Dino Guess</h3>
             </div>
-            </div> */}
+            </div>
             </div>
         </div>
     )

@@ -1,8 +1,13 @@
-export const invasionGame = (canvas, playing) => {
-    if (playing === false) {
-        return;
-    }
+
+let playingStatus = true;
+
+export const breakGame = () => {
+    playingStatus = false;
+}
+
+export const invasionGame = (canvas) => {
     // * Canvas states
+    playingStatus = true;
     const ctx = canvas.getContext('2d');
         
     // * Get images
@@ -35,6 +40,7 @@ export const invasionGame = (canvas, playing) => {
     }
 
     function setUpFallings () {
+        if (playingStatus === false) return;
         for (let i = 0; i < fallings_num; i++) {
             let number = Math.round(Math.random())
             if (number === 0) {
@@ -47,10 +53,10 @@ export const invasionGame = (canvas, playing) => {
     }
 
     function eachFalling (item, index) {
-        
+        if (playingStatus === false) return;
         function falling() {
             if (healthBar < 1) {
-                alert('Game Over, play again?')
+                alert('Do you want to play again?')
                 score = 0;
                 healthBar = 3;
                 level = 1;
@@ -77,7 +83,6 @@ export const invasionGame = (canvas, playing) => {
             }
             cancelAnimationFrame(falling)
             if (fallings[fallings.length - 1].y >= 600) {
-                console.log(level);
                 fallings = [];
                 if (level === 3.5) {
                     level = 3.5
@@ -98,9 +103,9 @@ export const invasionGame = (canvas, playing) => {
         })
     }
 
-
     // ************move dino fnc
     function dinoMouse () {
+        if (playingStatus === false) return;
         canvas.addEventListener("mousemove", (e) => {
             if (healthBar < 1) return;
             if (e.movementX < 0) {

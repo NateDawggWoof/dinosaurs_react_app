@@ -3,16 +3,15 @@ import * as dinoInvasion from './dinoInvasion';
 
 const LastMealGame = () => {
     
-    const [playing, setPlaying] = useState(true)
     const canvasRef = useRef();
+
     useEffect(() => {
-        alert('Welcome to Dino Game!')
         const canvas = canvasRef.current;
-        dinoInvasion.invasionGame(canvas, playing);
+        dinoInvasion.invasionGame(canvas);
         return () => {
-            setPlaying(!playing)
-        }
-    }, [])
+            dinoInvasion.breakGame();
+        }  
+    })
 
     const canvasBlock = {
         display: 'flex',

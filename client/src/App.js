@@ -10,6 +10,8 @@ import Blockparty from './containers/BlockPartyGame';
 import './App.css';
 import Layout from './components/Layout';
 import DragDropContainer from './containers/DragDropContainer';
+import { CgGames } from 'react-icons/cg';
+import GamesContainer from './containers/Games';
 import PageNotFound from './components/404-page';
 
 const App = () => {
@@ -34,29 +36,43 @@ const App = () => {
       <Router>
         <Layout>
         <Switch>
+    
           <Route path="/" exact>
             <HomeContainer saveUserName={saveUserName} allDinosaurs={allDinosaurs}/>
           </Route>
+
           <Route path="/dinosaurs" exact>
             <DinoContainer allDinosaurs={allDinosaurs}/>
           </Route>
+
           <Route path="/games" exact>
-            <QuizContainer allDinosaurs={allDinosaurs}/>
+            <GamesContainer allDinosaurs={allDinosaurs} userName = {userName}/>
           </Route>
+
            {/* our games routes */}
           <Route path="/games/dragdrop" exact>
               <DragDropContainer allDinosaurs={allDinosaurs}/>
           </Route>
+
           <Route path="/games/lastmeal" exact>
             <LastMealContainer allDinosaurs={allDinosaurs}/>
-          <Route path="/games/scrabble">
+           </Route>
+
+          <Route path="/games/scrabble" exact>
               <DinoScrabble allDinosaurs={allDinosaurs}/>
           </Route>
-          <Route path="/games/blockparty">
+
+          <Route path="/games/blockparty" exact>
             <Blockparty/>
           </Route>
+
+          <Route path="/games/quiz" exact>
+            <QuizContainer allDinosaurs={allDinosaurs}/>          
+          </Route>
+
           <Route component={PageNotFound}>
           </Route>
+
         </Switch>
       </Layout>
       </Router>

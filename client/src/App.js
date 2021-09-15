@@ -6,7 +6,7 @@ import HomeContainer from './containers/HomeContainer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import Layout from './components/Layout';
-import DragDrop from './components/DragDrop';
+import DragDropContainer from './containers/DragDropContainer';
 import { DragDropContext } from 'react-beautiful-dnd';
 
 const App = () => {

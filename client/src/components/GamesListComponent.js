@@ -20,7 +20,7 @@ const gamesListComponent = ({ allDinosaurs, userName, history}) => {
 
             <div className='gameItems-wrapper'>
             <div className='gameItems-img-wrapper'>
-                <input type="image" src="http://example.com/path/to/image.png" onClick={onClickDirect1}/>
+                <input className='gameItems-img' type="image" onClick={onClickDirect1} src={`../image/gameQuiz.jpeg`} alt="quiz"/>
             </div>
             <div className='gameItems-name'>
                 <h3>Quiz</h3>
@@ -29,7 +29,7 @@ const gamesListComponent = ({ allDinosaurs, userName, history}) => {
 
             <div className='gameItems-wrapper' >
             <div className='gameItems-img-wrapper'>
-                <input type="image" src="http://example.com/path/to/image.png" onClick={onClickDirect2} />
+                <input className='gameItems-img' type="image" src={`../image/gameLastMeal.png`} onClick={onClickDirect2} />
             </div>
             <div className='gameItems-name'>
                 <h3>Last Meal</h3>
@@ -38,7 +38,7 @@ const gamesListComponent = ({ allDinosaurs, userName, history}) => {
 
             <div className='gameItems-wrapper' >
             <div className='gameItems-img-wrapper'>
-                <input type="image" src="http://example.com/path/to/image.png" onClick={onClickDirect3}/>
+                <input className='gameItems-img' type="image" src={`../image/gameDrag.png`} onClick={onClickDirect3}/>
             </div>
             <div className='gameItems-name'>
                 <h3>Dino Drag</h3>
@@ -47,7 +47,7 @@ const gamesListComponent = ({ allDinosaurs, userName, history}) => {
 
             <div className='gameItems-wrapper' >
             <div className='gameItems-img-wrapper'>
-                <input type="image" src="http://example.com/path/to/image.png" onClick={onClickDirect4}/>
+                <input className='gameItems-img' type="image" src={`../image/gameBlock.png`} onClick={onClickDirect4}/>
             </div>
             <div className='gameItems-name'>
                 <h3>Dino Blocks</h3>
@@ -56,7 +56,7 @@ const gamesListComponent = ({ allDinosaurs, userName, history}) => {
 
             <div className='gameItems-wrapper' onClick={onClickDirect5}>
             <div className='gameItems-img-wrapper'>
-                <input type="image" src="http://example.com/path/to/image.png" />
+                <input className='gameItems-img' type="image" src={`../image/gameGuess.png`} />
             </div>
             <div className='gameItems-name'>
                 <h3>Dino Guess</h3>

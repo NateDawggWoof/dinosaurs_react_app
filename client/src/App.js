@@ -7,6 +7,7 @@ import LastMealContainer from './containers/LastMealContainer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout';
+import DragDropContainer from './containers/DragDropContainer';
 
 const App = () => {
 
@@ -18,12 +19,12 @@ const App = () => {
     setUserName(firstName)
   }
 
-    useEffect(() => {
-      dinoService.getDinosaurs()
-        .then((allDinosaurs) => {
-          setAllDinosaurs(allDinosaurs);
-        })
-      }, [])
+  useEffect(() => {
+    dinoService.getDinosaurs()
+      .then((allDinosaurs) => {
+        setAllDinosaurs(allDinosaurs);
+      })
+    }, [])
 
   return (
     <>
@@ -40,7 +41,10 @@ const App = () => {
             {/* will be changed to GamesContainer once created */}
             <QuizContainer allDinosaurs={allDinosaurs}/>
           </Route>
-            {/* our games routes */}
+           {/* our games routes */}
+          <Route path="/games/dragdrop">
+              <DragDropContainer allDinosaurs={allDinosaurs}/>
+          </Route>
           <Route path="/games/lastmeal">
             <LastMealContainer allDinosaurs={allDinosaurs}/>
           </Route>

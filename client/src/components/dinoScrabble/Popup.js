@@ -19,17 +19,17 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
 
     const winDino = () => {
         if (selectedWord === "tyra") {
-            <div><img style ={{width: 160,height: 160}} src={`..../public/image/02.png`}/></div>
+            return <div><img style ={{width: 160,height: 160}} src={`..../public/image/02.png`}/></div>
         } else if (selectedWord === "tricky"){
             <div><img style ={{width: 160,height: 160}} src={`..../public/image/03.png`}/></div>  
         } else if (selectedWord === "terry"){
-            <div><img style ={{width: 160,height: 160}} src={`..../public/image/04.png`}/></div>  
+            return <div><img style ={{width: 160,height: 160}} src={`..../public/image/04.png`}/></div>  
         } else if (selectedWord === "emily"){
-            <div><img style ={{width: 160,height: 160}} src={`..../public/image/01.png`}/></div>  
+            return <div><img style ={{width: 160,height: 160}} src={`../../../public/image/01.png`}/></div>  
         } else if (selectedWord === "stig"){
-            <div><img style ={{width: 160,height: 160}} src={`..../public/image/06.png`}/></div>  
+            return <div><img style ={{width: 160,height: 160}} src={`..../public/image/06.png`}/></div>  
         } else {
-            <div><img style ={{width: 160,height: 160}} src={`..../public/image/05.png`}/></div>  
+            return <div><img style ={{width: 160,height: 160}} src={`../../../public/image/05.png`}/></div>  
         } 
     }
 
@@ -38,7 +38,7 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
     let playable = true;
 
     if (checkWin(correctLetters, wrongLetters, selectedWord) === "win") {
-        finalMessage = `Congratulations! You won!`;
+        finalMessage = `Congratulations! You won! ${winDino}`;
         playable = false;
     } else if (checkWin(correctLetters, wrongLetters, selectedWord) === "lose") {
         finalMessage = "Try Again! ";

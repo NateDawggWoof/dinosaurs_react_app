@@ -55,7 +55,7 @@
     padding: 20px 30px;
     position: relative;
     margin: auto;
-    height: 350px;
+    height: 450px;
     width: 450px;
   }
 
@@ -85,8 +85,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: absolute;
-    bottom: 10px;
+    position: fixed;
+    bottom: 110px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -159,13 +159,14 @@
     outline: none;
   }
   
-  .notification-container p {
-    margin: 0;
-  }
-  
   .notification-container.show {
-      margin: 10px;
-    -webkit-transform: translateY(-60px);
-            transform: translateY(-60px);
+      margin: 20px;
+      font-size: 45px;
+    -webkit-transform: translateY(-480px);
+            transform: translateY(-480px);
+  }
+
+  .notification-container p {
+    margin: 10;
   }
   /*# sourceMappingURL=App.css.map */

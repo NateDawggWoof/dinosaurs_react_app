@@ -1,0 +1,29 @@
+body#flappy {
+    height: 100vh; 
+    background: #111; 
+    text-align: center;
+    background-color: darkolivegreen;
+    padding: 20px;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+#flappy h1 {
+    color: #f00;
+    font-weight: 100;
+    text-align: center;
+    font-size: 50px;
+    -webkit-text-stroke: 3px white;
+    background-color: #000;
+    border: 5px solid #ff0;
+    margin: 0 auto;
+    padding: 8px 8px;
+    box-shadow: 6px 13px 10px #465927;
+    width: 50%;
+    user-select: none;
+}
+
+#flappy canvas {
+    margin-top: 20px;
+    border: 1px solid black;
+    box-shadow: 6px 13px 10px #465927;
+}

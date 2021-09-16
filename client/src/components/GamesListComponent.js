@@ -9,6 +9,7 @@ const gamesListComponent = ({ allDinosaurs, userName, history}) => {
     const onClickDirect3 = () => history.push('/games/dragdrop')
     const onClickDirect4 = () => history.push('/games/blockparty')
     const onClickDirect5 = () => history.push('/games/scrabble')
+    const onClickDirect6 = () => history.push('/games/flappydactyl')
 
         
     
@@ -51,6 +52,15 @@ const gamesListComponent = ({ allDinosaurs, userName, history}) => {
             </div>
             <div className='gameItems-name'>
                 <h3>Dino Blocks</h3>
+            </div>
+            </div>
+
+            <div className='gameItems-wrapper' >
+            <div className='gameItems-img-wrapper'>
+                <input className='gameItems-img' type="image" src={`../image/gameBlock.png`} onClick={onClickDirect6}/>
+            </div>
+            <div className='gameItems-name'>
+                <h3>Flappy Dactyl</h3>
             </div>
             </div>
 

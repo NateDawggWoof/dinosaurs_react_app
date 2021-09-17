@@ -44,10 +44,22 @@ export const invasionGame = (canvas) => {
             let number = Math.round(Math.random())
             if (number === 0) {
                 fallings.push({
-                    triggered: false, type: 'meteor', img: meteorImg, width: 50, height: 150, x: Math.floor(Math.random() * 600), y: -150})}
+                    triggered: false,
+                    type: 'meteor',
+                    img: meteorImg,
+                    width: 50,
+                    height: 150,
+                    x: Math.floor(Math.random() * 600), y: -150})
+                }
             if (number === 1) {
                 fallings.push({
-                    triggered: false, type: 'meat', img: meatImg, width: 50, height: 60, x: Math.floor(Math.random() * 600), y: -60,})}
+                    triggered: false,
+                    type: 'meat',
+                    img: meatImg,
+                    width: 50,
+                    height: 60,
+                    x: Math.floor(Math.random() * 600), y: -60,})
+                }
         }
     }
 
@@ -81,7 +93,7 @@ export const invasionGame = (canvas) => {
                 requestAnimationFrame(falling)
             }
             cancelAnimationFrame(falling)
-            if (fallings[fallings.length - 1].y >= 600) {
+            if (fallings && fallings[fallings.length - 1].y >= 600) {
                 fallings = [];
                 if (level === 3.5) {
                     level = 3.5

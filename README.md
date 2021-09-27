@@ -13,12 +13,12 @@ To deploy this project run
 ```bash
 - Ensure NPM is installed on your local machine
 - Clone the repository and open it up in the terminal
-- Change to the server directory and run **npm install** to install all the pre-requisites listed in package.json
-- Run **npm run seeds** to load seed data into MongoDB
-- Run **npm run server:dev** to start the server
+- Change to the server directory and run ## npm install to install all the pre-requisites listed in package.json
+- Run npm run seeds to load seed data into MongoDB
+- Run npm run server:dev to start the server
 - Open a new terminal window, then change to the client directory
-- Run **npm install** to install all pre-requisites (this may take a few minutes to complete)
-- Run **npm start** to start the client application
+- Run npm install to install all pre-requisites (this may take a few minutes to complete)
+- Run npm start to start the client application
 - Verify it is running correctly by browsing to http://localhost:3000
 ```
 

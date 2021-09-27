@@ -40,4 +40,3 @@ To deploy this project run
 - [@nathanpianu](https://github.com/NateDawggWoof)
 - [@brianporteous](https://github.com/br1Pod) 
 - [@jeremyyoo](https://github.com/jeremyoo)
-- 

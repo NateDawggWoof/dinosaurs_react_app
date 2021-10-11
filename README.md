@@ -1,10 +1,10 @@
 
 # Jurassic App
-An education app aimed at young children created by 5 members of E51 for CodeClan's Professional Software Development Course. 
+An educational app aimed at young children created by 5 members of E51 for CodeClan's Professional Software Development Course. 
 
 The aim was to use technologies taught in the previous weeks - React, JavaScript, MongoDB. Additionally, other tools and libraries such as Canvas, a drag and drop library, and React Router were researched and functionality was developed and added accordingly.
 
-Children can read information about dinosaurs, then take a short quiz based on the information they have read. Additionally, children can play 5 dinosaur-themed games. 
+Children can read information about dinosaurs, then take a short quiz based on the information they have read. Children can also play 5 dinosaur-themed games. 
 
 ## Deployment
 

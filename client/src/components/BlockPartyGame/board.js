@@ -27,17 +27,13 @@ export default function Board () {
 
             paddleProps.y = canvas.height - 30;
 
-
             let newBrickSet = Brick(player.level, bricks, canvas, brickObj, player)
 
             if(newBrickSet && newBrickSet.length > 0){
                 bricks = newBrickSet
             }
-
-     
         
             ctx.clearRect(0,0,canvas.width, canvas.height)
-
 
             PlayerStats(ctx, player, canvas)
 
@@ -79,7 +75,6 @@ export default function Board () {
            
               }
             }
-
             paddle(ctx, canvas, paddleProps)
 
             PaddleHit(ballObj, paddleProps)

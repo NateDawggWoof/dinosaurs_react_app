@@ -1,0 +1,175 @@
+.scrabble-body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: 'Bubblegum Sans', cursive;
+  background: url("./images/scrabble.jpg");
+  background-size: cover;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display:flexbox;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  margin-top: 0px;
+  margin: 0;
+  overflow: hidden;
+  font-size: 40px;
+  text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#scrabble-button {
+  font-family: 'Bubblegum Sans', cursive;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  color: rgb(138, 91, 191);
+  background: white;
+  text-shadow:2px rgb(138, 91, 191);
+  border-radius: 0.5rem;
+  border: 2px solid rgb(138, 91, 191);
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#scrabble-button button:hover {
+  background-color: #bdf7f6;
+}
+  
+#scrabble-header {
+  margin: 20px 0 0;
+  margin-top: 50px;
+  padding: 40px;
+  color: white;
+  text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+  
+.game-container {
+  padding: 20px 30px;
+  position: relative;
+  margin: auto;
+  height: 450px;
+  width: 450px;
+}
+
+.wrong-letters-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+}
+  
+.wrong-letters-container p {
+  margin: 0 0 5px;
+}
+
+.wrong-letters-container p span {
+  font-size: 40px;
+}
+
+.word {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  bottom: 110px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+  
+.letter {
+  border-bottom: 3px solid #fefefe;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 14px;
+  height: 100px;
+  width: 40px;
+}
+  
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+  
+.popup-container .popup {
+  background: #c8abf7;
+  border-radius: 5px;
+  flex:content;
+  flex-direction: column;
+  -webkit-box-shadow: 0 15px 10px 3px #fff;
+          box-shadow: 0 5px 10px 3px #fff;
+  padding: 20px;
+  padding-top: 0px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.popup-container .popup button {
+  cursor: pointer;
+  background-color: rgb(249, 246, 246);
+  text-shadow:2px rgb(138, 91, 191);
+  color: rgb(138, 91, 191);
+  border-color: rgb(138, 91, 191);
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 20px;
+}
+
+.popup-container .popup button:hover {
+  background-color: lightgray;
+}
+
+.popup-container .popup button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.popup-container .popup button:focus {
+  outline: none;
+}
+
+.notification-container.show {
+    margin: 20px;
+    font-size: 45px;
+  -webkit-transform: translateY(-480px);
+          transform: translateY(-480px);
+}
+
+.notification-container p {
+  margin: 10;
+  
+}

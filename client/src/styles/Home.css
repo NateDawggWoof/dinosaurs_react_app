@@ -1,13 +1,11 @@
 #homepage {
-    background-color:darkolivegreen;  
+    background-color: darkolivegreen;
     display: flex;
     justify-content: center;
-    flex-direction: column;  
+    flex-direction: column;
     font-family: 'Bubblegum Sans', cursive;
-    border: 2px solid #465927;
-    margin: 10px auto;
-    width: 70%;
-    box-shadow: 6px 13px 10px #ccc;
+    margin: 4rem auto 3rem;
+    height: 100%;
 }
 
 #homeheader {
@@ -49,16 +47,21 @@
 }
 
 #homepage p {
-    margin: -40px auto 10px;
+    margin: -25px auto 10px;
     padding: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     font-size: 30px;
+    color: #fff8dc;
 }
 
-p button {
+#homepage p:hover {
+    color: #bdb76b;
+}
+
+#homepage p button {
     background-image: url(./images/footprint.png);
     display: block;
     height: 150px;
@@ -69,4 +72,67 @@ p button {
     background-size: 120px;
     margin: auto;
     background-blend-mode: overlay;
+}
+
+#homepage p button:hover {
+    /* border: 1px solid #fffc00; */
+    background-color: transparent;
+    background-blend-mode: luminosity;
+}
+ 
+
+/* homepage name popup styles  */
+
+#homepage #user-name-popup {
+    display: flex;
+    justify-content: center;
+}
+
+#user-name-popup form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 5px solid #fffc00;
+    padding: 20px;
+    background-color: #ff0001;
+    margin: 20px;
+    box-shadow: 6px 13px 10px #465927;
+}
+
+#user-name-popup form label{
+    display: block;
+    width: 80%;
+    margin: 0px auto 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-weight: 100;
+    text-align: center;
+    font-size: 40px;
+    -webkit-text-stroke: 2px white;
+    background-color: #000;
+    border: 2px solid #ff0;
+}
+
+#user-name-popup form input#first-name {
+    margin: 0 0 15px 0;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#user-name-popup form input#namesubmit {
+    width: 60%;
+    margin: 0px auto 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    text-align: center;
+    background-color: #000;
+    border: 2px solid #ff0;
 }

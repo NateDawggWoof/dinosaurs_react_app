@@ -10,7 +10,7 @@ const DinoList = ({ allDinosaurs, history}) => {
 
     const onClickSelected = (clickedDinosaur) => setSelectedDinosaur(clickedDinosaur)
     const onClickClose = () => setSelectedDinosaur(null)
-    const onClickDirect = () => history.push('/quiz')
+    const onClickDirect = () => history.push('/games/quiz')
 
     const dinoNodes = allDinosaurs.map((dinosaur, index) => {
         return <DinoItem dinosaur={dinosaur} key={index} onClickSelected={onClickSelected}/>
